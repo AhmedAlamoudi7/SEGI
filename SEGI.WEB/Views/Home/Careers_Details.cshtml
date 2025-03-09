@@ -1,0 +1,442 @@
+﻿@using SEGI.WEB.Core.Enums
+@using SEGI.WEB.Core.ViewModels
+ @model InterfaceViewModel
+@{
+    ViewData["Title"] = @Model?.Career?.Title;
+    var media = "@media";
+
+
+   
+    string pageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}//Home/Careers_Details/{Model.Career.Id}";
+    var rawDescription = Model?.Career?.Description ?? "SEGI ENGINEERING GROUP INTERNATIONAL";
+    var plainTextDescription = Regex.Replace(rawDescription, "<.*?>", ""); // Removes all HTML tags
+    ViewData["MetaDescription"] = plainTextDescription;
+
+    ViewData["MetaTitle"] = (Model?.Career?.Title ?? "SEGI ENGINEERING GROUP INTERNATIONAL");
+    ViewData["MetaImage"] = $"{Context.Request.Scheme}://{Context.Request.Host}//Files/Images/" + @Model?.FixedItem?.Logo_White;
+    ViewData["MetaUrl"] = pageUrl;
+}
+
+
+<div x-data="{
+search: false,
+mobileMenu: false,
+dropdown: false,
+mobileDropdown: false,
+}">
+    <div class="fixed bottom-0 left-0 m-4 z-50" x-cloak>
+        <a href="#"
+           class="transition inline-flex items-center justify-center w-12 h-12 text-sm rounded-full bg-primary-600 text-white transform | hover:scale-90 | md:w-14 md:h-14"
+           x-data="{ visible: false }"
+           x-on:scroll.window="visible = window.scrollY >= window.innerHeight ? true : false"
+           x-bind:class="visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
+           x-on:click.prevent="window.scroll({ top: 0, left: 0, behavior: 'smooth' });"
+           aria-label="Back to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="absolute z-50 top-0 left-0 w-full bg-white" x-bind:class="{
+'fixed' : mobileMenu,
+'absolute' : !mobileMenu
+}">
+        <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto py-5 flex items-center justify-between | lg:py-8">
+            <div class="flex items-center px-8 | lg:px-4" data-aos="fade-y--sm">
+                <a href="~/Home/Index"
+                   class="inline-block relative transform | hover:scale-90">
+                    <img src="~/Files/Images/@Model?.FixedItem?.Logo_Dark" alt="Craft 3" class="h-8 w-auto | lg:h-24">
+                </a>
+                <div class="ml-7" x-show="!search">
+                    <div class="relative text-primary delay-900" data-aos="fade-y--sm">
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center pr-8 transform -translate-y-1 | xl:hidden">
+                <a href="#" class="text-xl text-primary"
+                   x-on:click.prevent="mobileMenu = mobileMenu ? false : true" aria-label="Navigation">
+                    <i class="fal fa-bar transform transition" aria-hidden="true" x-bind:class="{
+'fa-bars rotate-0' : !mobileMenu,
+'fa-times rotate-90' : mobileMenu
+}"></i>
+                </a>
+            </div>
+            <div class="px-8 | lg:px-4 items-center space-x-7 hidden | xl:inline-flex">
+                <div class="relative delay-100" data-aos="fade-y--sm">
+                    <a href="~/Home/Index" class="text-primary tracking-tight underlined"
+                       style="color:#173C82">
+                        <span>
+                            Home
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/AboutUs" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            About Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/History" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            History
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-300" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sectors" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sectors
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-400" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Services" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Services
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-500" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Projects" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Projects
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-600" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Careers" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Careers
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sustinabilty" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sustainability
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-800" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/ContactUs" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Contact Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-900" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/News" class="text-primary tracking-tight underlined underlined--visible"
+                       style="color:#173C82">
+                        <span>
+                            News
+                        </span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed w-full h-full z-40 top-0 left-0 transition bg-primary flex items-center justify-center text-center opacity-0 pointer-events-none duration-500 | xl:hidden"
+         x-cloak x-bind:class="{
+'opacity-100 pointer-events-auto' : mobileMenu,
+'opacity-0 pointer-events-none' : !mobileMenu
+}">
+        <div class="">
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-100" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/index" class="text-white text-xl underlined">
+                    <span>
+                        Home
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/AboutUs" class="text-white text-xl underlined">
+                    <span>
+                        About Us
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/History" class="text-white text-xl underlined">
+                    <span>
+                        History
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-400" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Sectors" class="text-white text-xl underlined">
+                    <span>
+                        Sectors
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-500" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Services" class="text-white text-xl underlined">
+                    <span>
+                        Services
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-600" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Projects" class="text-white text-xl underlined">
+                    <span>
+                        Projects
+                    </span>
+                </a>
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Careers" class="text-white text-xl underlined">
+                    <span>
+                        Careers
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+            'opacity-100 translate-y-0' : mobileMenu,
+            'opacity-0 translate-y-2' : !mobileMenu
+            }">
+                <a href="~/Home/Sustinabilty" class="text-white text-xl underlined">
+                    <span>
+                        Sustainability
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                    'opacity-100 translate-y-0' : mobileMenu,
+                                    'opacity-0 translate-y-2' : !mobileMenu
+                                    }">
+                <a href="~/Home/ContactUs" class="text-white text-xl underlined">
+                    <span>
+                        Contact Us
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                                            'opacity-100 translate-y-0' : mobileMenu,
+                                                            'opacity-0 translate-y-2' : !mobileMenu
+                                                            }">
+                <a href="~/Home/News" class="text-white text-xl underlined">
+                    <span>
+                        News
+                    </span>
+                </a>
+
+            </div>
+            </a>
+        </div>
+    </div>
+    <div x-on:click="dropdown = false">
+        <!-- Start / Content  -->
+        <!-- Start /  Who we are Section -->
+
+
+        <div class="w-full  bg-white py-10 | lg:py-32">
+            <div class="w-full">
+                <div class="text-center w-full mx-auto max-w-4xl relative z-20 py-8 px-6 mt-4 | lg:py-14 lg:px-10" style="background-color:#f3f3f3">
+                    <div class="font-semibold text-primary-500 text-center mb-3 text-sm | lg:text-base lg:mb-6 aos-init aos-animate"
+                         data-aos="fade-y">
+                        <i class="fas fa-calendar" aria-hidden="true"></i>
+                        <span class="ml-1">
+                            @Model?.Career?.CreatedAt
+                        </span>
+                    </div>
+                    <div class="delay-100 aos-init aos-animate" data-aos="fade-y">
+                        <h1 class="font-sans-primary text-2xl | sm:text-3xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight ">
+                            @Model?.Career?.Title
+                        </h1>
+                    </div>
+ 
+                </div>
+            </div>
+
+
+
+            <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between mt-10 | lg:mt-20">
+                <div class="px-8 | lg:px-4 w-full | lg:w-2/12">
+                    <div class="sticky w-full top-0 left-0 pt-6" style="margin-left: 45%;">
+                        <div class="w-full mb-4 | lg:mb-10 aos-init aos-animate" data-aos="fade-y">
+                            <div class="w-full mb-1">
+                                <div style="color:#173C82" class="font-sans-primary text-base | lg:text-md text-secondary font-semibold leading-tighter tracking-tight
+">
+                                    Category
+                                </div>
+                            </div><div class="text-base tracking-tight leading-tight text-gray-800 | lg:text-md">
+                                @if (Model?.Career?.Categories?.Any() == true)
+                                {
+                                    @string.Join(", ", Model.Career.Categories)
+                                }
+                            </div>
+                        </div>
+
+                        <div class="w-full mb-4 | lg:mb-10 aos-init aos-animate" data-aos="fade-y">
+                            <div class="w-full mb-1">
+                                <div style="color:#173C82" class="font-sans-primary text-base | lg:text-md text-secondary font-semibold leading-tighter tracking-tight
+">
+                                    Date Published
+                                </div>
+                            </div><div class="text-base tracking-tight leading-tight text-gray-800 | lg:text-md">
+                                @Model?.Career?.CreatedAt
+                            </div>
+                        </div>
+                        <div class="w-full mb-4 | lg:mb-10 aos-init aos-animate" data-aos="fade-y">
+                            <div class="w-full mb-1">
+                                <div style="color:#173C82" class="font-sans-primary text-base | lg:text-md text-secondary font-semibold leading-tighter tracking-tight
+">
+                                    Status
+                                </div>
+                            </div><div class="text-base tracking-tight leading-tight text-gray-800 | lg:text-md">
+                                @(Model?.Career?.IsActive== true?"Open":"Close")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 | lg:px-4 w-full | lg:w-8/12">
+                    <div class="mx-auto max-w-xl | lg:max-w-3xl">
+                        <div class="aos-init aos-animate" data-aos="fade-y">
+                            <div class="w-full -mb-6">
+                                <p class="w-full font-sans-primary leading-snug tracking-tight text-sm mb-6 lg:text-base text-gray-800 ">
+                                    @Html.Raw(Model?.Career?.Description)
+                                </p>
+
+                            </div>
+                        </div>
+                        @if (Model?.Career?.IsActive ==true)
+                        
+                        {
+                            <div class="w-full flex flex-wrap items-center space-x-4 mt-8 | lg:space-x-8 lg:mt-16 aos-init aos-animate" data-aos="fade-y">
+                                <a href="~/Home/ProjectApplyForm/@Model?.Career?.Id" class="
+transition
+inline-flex
+items-center
+font-medium
+tracking-tight
+leading-tight
+flex-shrink-0
+group
+underlined-group
+focus:outline-none
+lg:text-md
+text-black " target="_blank" aria-label="Apply Today - open in a new tab">
+                                    <div class="underlined mr-4">
+                                        Apply Today
+                                    </div><div class="transition transform | group-hover:scale-90">
+                                        <div class="w-12 h-12 text-md | lg:w-16 lg:h-16 lg:text-lg rounded-full flex items-center justify-center transition bg-black bg-opacity-5 group-hover:bg-primary text-black | group-hover:text-white">
+                                            <span class="mt-0.5">
+                                                <i class="fal fa-arrow-right" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="px-8 | lg:px-4 w-full | lg:w-2/12">
+                    <div class="sticky top-0 left-0 w-full pt-4 max-w-xl mx-auto">
+                        <div style="color:#173C82" class="text-secondary-500 font-semibold mb-3 | lg:mb-6 aos-init aos-animate" data-aos="fade-y">
+                            Share this story
+                        </div><div class="w-full flex flex-col">
+                            <div class="delay-100 mb-2 w-full | lg:mr-12 lg:w-auto aos-init aos-animate" data-aos="fade-y">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=@pageUrl" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=@pageUrl','popup','width=600,height=600');" class="inline-flex items-center space-x-3 tracking-tight underlined text-black group" data-uw-rm-kbnav="click" data-uw-rm-brl="PR">
+                                    <div class="text-primary">
+                                        <i class="fab fa-facebook mt-0.5" aria-hidden="true"></i>
+                                    </div><div>
+                                        Facebook
+                                    </div>
+                                </a>
+                            </div><div class="delay-200 mb-2 w-full | lg:mr-12 lg:w-auto aos-init aos-animate" data-aos="fade-y">
+                                <a href="https://twitter.com/intent/tweet?url=@pageUrl&text=@Model.Career.Title" target="popup" class="inline-flex items-center space-x-3 tracking-tight underlined text-black group" data-uw-rm-kbnav="click" data-uw-rm-brl="PR">
+                                    <div class="text-primary">
+                                        <i class="fab fa-x-twitter mt-0.5" aria-hidden="true"></i>
+                                    </div><div>
+                                        X
+                                    </div>
+                                </a>
+                            </div><div class="delay-300 mb-2 w-full | lg:mr-12 lg:w-auto aos-init aos-animate" data-aos="fade-y">
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=@pageUrl&title=@Model.Career.Title" target="popup" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=@pageUrl&title=@Model.Career.Title','popup','width=600,height=600');" class="inline-flex items-center space-x-3 tracking-tight underlined text-black group" data-uw-rm-kbnav="click">
+                                    <div class="text-primary">
+                                        <i class="fab fa-linkedin mt-0.5" aria-hidden="true"></i>
+                                    </div><div>
+                                        LinkedIn
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+ 
+
+
+    </div>
+</div>

@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEGI | @ViewData["Title"]</title>
+
+    <script type="importmap"></script>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="~/Front-End/dist/css/app-3d6ba0bd0b.css" rel="stylesheet" />
+    <script src="~/Front-End/kit.fontawesome.com/abc9cce17b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Sans+SC&amp;display=swap" rel="stylesheet">
+        <style>
+            [x-cloak] {
+                display: none
+            }
+        </style>
+    <link rel="shortcut icon" href="~/Front-End/dist/images/Logo/SEGI_Icon.png">
+    <link rel="manifest" href="~/Front-End/dist/images/favicon/manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#fff">
+        <meta name="application-name" content="craftcms-tailwind">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="craftcms-tailwind">
+        <meta name="msapplication-TileColor" content="#FFF">
+        <script>
+            (function(d) {
+                var s = d.createElement("script");
+                s.setAttribute("data-position", 3);
+                s.setAttribute("data-account", "52RqZyoBvO");
+            s.setAttribute("src", "~/Front-End/cdn.userway.org/widget.js");
+                if (window.innerWidth >= 768) {
+                    s.setAttribute("data-size", "large");
+                } else {
+                    s.setAttribute("data-size", "small");
+                }
+                (d.body || d.head).appendChild(s);
+            })(document)
+        </script>
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="robots" content="all">
+        <meta content="SEGI" property="og:site_name">
+        <meta content="website" property="og:type">
+        <meta name="description" content="@ViewData["MetaDescription"]">
+        <meta content="@ViewData["MetaUrl"]" property="og:url">
+        <meta content="@ViewData["MetaTitle"]" property="og:title">
+        <meta content="@ViewData["MetaDescription"]" property="og:description">
+    <meta property="og:image" content="@ViewData["MetaImage"]" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="@ViewData["MetaUrl"]" />
+    <meta property="twitter:title" content="@ViewData["Title"]" />
+    <meta property="twitter:description" content="@ViewData["MetaDescription"]" />
+    <meta property="twitter:image" content="@ViewData["MetaImage"]" />
+
+        <link href="~/Home/Index" rel="canonical">
+        <link href="~/Home/Index" rel="home">
+        <link href="~/Home/Index" rel="alternate" hreflang="x-default">
+        <link href="~/Home/Index" rel="alternate" hreflang="en-gb">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body x-data="app()" x-init="viewportHeight(), reveal()" x-on:resize.window="viewportHeight()"
+      body-lock.window="if ($event.detail) { document.body.classList.add('overflow-hidden') } else { document.body.classList.remove('overflow-hidden') }"
+      class="">
+    <div id="app">
+            @RenderBody()
+        <partial name="_Footer" />
+
+    </div>
+
+
+
+    <script src="~/Front-End/dist/js/app-ff6a50d3c8.js" defer></script>
+
+
+    <script type="text/javascript">
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "~/front-end/snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+             src="https://dc.ads.linkedin.com/collect/?pid=3800833&amp;fmt=gif" />
+    </noscript>
+    <script type="text/javascript">
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('search', () => ({
+                keyword: '',
+                resultsAll: [],
+                resultsBlog: [],
+                instantSearch() {
+
+                    _self = this;
+
+                    endpoints = ['searchAll', 'searchBlog'];
+
+                    endpoints.forEach(function (endpoint) {
+
+                        endpointUrl = 'https://SEGI.com/' + endpoint + '.json?keyword=' +
+                            _self.keyword;
+
+                        if (_self.keyword == '') {
+                            _self.resultsAll = [];
+                            _self.resultsBlog = [];
+                        } else {
+
+                            fetch(endpointUrl)
+                                .then(
+                                    function (response) {
+                                        return response.json();
+                                    }
+                                )
+                                .then(
+                                    function (data) {
+                                        if (endpoint == 'searchAll') {
+                                            _self.resultsAll = data['data'];
+                                        } else {
+                                            _self.resultsBlog = data['data'];
+                                        }
+                                    }
+                                )
+                                .catch(
+                                    function (empty) {
+                                        console.log(empty);
+                                    }
+                                );
+
+                        }
+
+                    });
+
+                }
+            }))
+        });
+
+        function pageIntro() {
+            return {
+                visible: Cookies.get('pageIntro-567589') ? false : true,
+                pageIntroInit(containerElement) {
+
+                    count = 0
+
+                    setInterval(() => {
+
+                        count = count + 1;
+                        introItems = document.querySelectorAll('.js-page-intro__item');
+
+                        for (var i = 0; i < introItems.length; i++) {
+
+                            if (count === i) {
+                                introItems[i].classList.remove('hidden');
+                            } else {
+                                introItems[i].classList.add('hidden');
+                            }
+
+                        }
+
+                        if (count === (introItems.length - 1)) {
+                            count = 0;
+                        }
+
+
+                    }, 400);
+
+                    setTimeout(() => {
+                        containerElement.classList.add('opacity-0', 'pointer-events-none');
+                    }, 2000);
+
+                }
+            }
+        };
+        var player = new Vimeo.Player(document.getElementById("js-video__567594"));
+        player.play();
+
+        player.on('play', function () {
+            player.setVolume(0);
+        });
+
+        document.querySelector('.js-video__audio')
+            .addEventListener("click", function () {
+                if (document.querySelector('.js-video__audio').classList.contains('is-active')) {
+                    player.setVolume(0)
+                    document.querySelector('.js-video__audio').classList.remove('is-active')
+                    document.querySelector('.js-video__audio-icon').classList.remove('fa-volume')
+                    document.querySelector('.js-video__audio-icon').classList.add('fa-volume-off')
+                } else {
+                    player.setVolume(1)
+                    document.querySelector('.js-video__audio').classList.add('is-active')
+                    document.querySelector('.js-video__audio-icon').classList.add('fa-volume')
+                    document.querySelector('.js-video__audio-icon').classList.remove('fa-volume-off')
+                }
+
+            });
+
+        function careersFilter() {
+            return {
+                removeParam(param) {
+                    let url = new URL(window.location.html);
+                    url.searchParams.delete(param);
+                    window.location.href = url.href;
+                }
+            }
+        };
+
+        function carouselBlog() {
+            return {
+                carouselBlogInit(id) {
+
+                    var slideshowElement = document.querySelector('.js-slideshow-' + id)
+                    var nextElement = document.querySelector('.js-slideshow-' + id + '__next')
+                    var prevElement = document.querySelector('.js-slideshow-' + id + '__prev')
+                    var progressElement = document.querySelector('.js-slideshow-' + id + '__progress')
+
+                    var slideshow = new Flickity(
+                        slideshowElement, {
+                        cellAlign: 'left',
+                        contain: true,
+                        prevNextButtons: false,
+                        pageDots: false,
+                        autoPlay: false,
+                        imagesLoaded: true,
+                        dragThreshold: 1
+                    }
+                    )
+
+                    nextElement.addEventListener(
+                        'click',
+                        function (event) {
+                            slideshow.next()
+                            event.preventDefault()
+                        }
+                    )
+
+                    prevElement.addEventListener(
+                        'click',
+                        function (event) {
+                            slideshow.previous()
+                            event.preventDefault()
+                        }
+                    )
+
+                    slideshow.on(
+                        'scroll',
+                        function (progress) {
+                            progress = Math.max(0, Math.min(1, progress));
+                            progressElement.style.width = progress * 100 + '%';
+                        }
+                    )
+
+                }
+            }
+        };
+
+        function cookieConsent() {
+            return {
+                visible: true,
+                show() {
+                    this.visible = Cookies.get('cookieConsent') ? false : true;
+                },
+                hide() {
+                    this.visible = false;
+                    Cookies.set('cookieConsent', 'false', {
+                        expires: 6
+                    });
+                }
+            }
+        };
+
+        function app() {
+            return {
+                viewportHeight: null,
+                reveal() {
+                    AOS.init({
+                        disable: 'mobile',
+                        mirror: false,
+                        once: true,
+                        offset: 50,
+                        delay: 0,
+                        throttleDelay: 200
+                    })
+                },
+                viewportHeight() {
+                    this.viewportHeight = window.innerHeight * 0.01;
+                    document.documentElement.style.setProperty('--vh', `${this.viewportHeight}px`);
+                }
+            }
+        };
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+

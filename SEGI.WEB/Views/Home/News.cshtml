@@ -1,0 +1,417 @@
+﻿@using SEGI.WEB.Core.Enums
+@using SEGI.WEB.Core.ViewModels
+@using Slugify;
+@model InterfaceViewModel
+@{
+    ViewData["Title"] = "News";
+    var media = "@media";
+    int currentPage = ViewBag.CurrentPage;
+    int totalPages = ViewBag.TotalPages;
+    var selectedCategoryId = Context.Request.Query["categoryId"]; // Get categoryId from the query string
+
+
+    ViewData["MetaDescription"] = ("SEGI News ENGINEERING GROUP INTERNATIONAL");
+    ViewData["MetaTitle"] = ("SEGI News  ENGINEERING GROUP INTERNATIONAL");
+    ViewData["MetaImage"] = $"{Context.Request.Scheme}://{Context.Request.Host}//Files/Images/" + @Model?.FixedItem?.Logo_Dark;
+
+    string pageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}//Home/News";
+    ViewData["MetaUrl"] = pageUrl;
+}
+
+
+<div x-data="{
+search: false,
+mobileMenu: false,
+dropdown: false,
+mobileDropdown: false,
+}">
+    <div class="fixed bottom-0 left-0 m-4 z-50" x-cloak>
+        <a href="#"
+           class="transition inline-flex items-center justify-center w-12 h-12 text-sm rounded-full bg-primary-600 text-white transform | hover:scale-90 | md:w-14 md:h-14"
+           x-data="{ visible: false }"
+           x-on:scroll.window="visible = window.scrollY >= window.innerHeight ? true : false"
+           x-bind:class="visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
+           x-on:click.prevent="window.scroll({ top: 0, left: 0, behavior: 'smooth' });"
+           aria-label="Back to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="absolute z-50 top-0 left-0 w-full bg-white" x-bind:class="{
+'fixed' : mobileMenu,
+'absolute' : !mobileMenu
+}">
+        <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto py-5 flex items-center justify-between | lg:py-8">
+            <div class="flex items-center px-8 | lg:px-4" data-aos="fade-y--sm">
+                <a href="~/Home/Index"
+                   class="inline-block relative transform | hover:scale-90">
+                    <img src="~/Files/Images/@Model?.FixedItem?.Logo_Dark" alt="Craft 3" class="h-8 w-auto | lg:h-24">
+                </a>
+                <div class="ml-7" x-show="!search">
+                    <div class="relative text-primary delay-900" data-aos="fade-y--sm">
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center pr-8 transform -translate-y-1 | xl:hidden">
+                <a href="#" class="text-xl text-primary"
+                   x-on:click.prevent="mobileMenu = mobileMenu ? false : true" aria-label="Navigation">
+                    <i class="fal fa-bar transform transition" aria-hidden="true" x-bind:class="{
+'fa-bars rotate-0' : !mobileMenu,
+'fa-times rotate-90' : mobileMenu
+}"></i>
+                </a>
+            </div>
+            <div class="px-8 | lg:px-4 items-center space-x-7 hidden | xl:inline-flex">
+                <div class="relative delay-100" data-aos="fade-y--sm">
+                    <a href="~/Home/Index" class="text-primary tracking-tight underlined"
+                       style="color:#173C82">
+                        <span>
+                            Home
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/AboutUs" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            About Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/History" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            History
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-300" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sectors" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sectors
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-400" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Services" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Services
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-500" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Projects" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Projects
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-600" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Careers" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Careers
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sustinabilty" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sustainability
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-800" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/ContactUs" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Contact Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-900" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/News" class="text-primary tracking-tight underlined underlined--visible"
+                       style="color:#173C82">
+                        <span>
+                            News
+                        </span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed w-full h-full z-40 top-0 left-0 transition bg-primary flex items-center justify-center text-center opacity-0 pointer-events-none duration-500 | xl:hidden"
+         x-cloak x-bind:class="{
+'opacity-100 pointer-events-auto' : mobileMenu,
+'opacity-0 pointer-events-none' : !mobileMenu
+}">
+        <div class="">
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-100" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/index" class="text-white text-xl underlined">
+                    <span>
+                        Home
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/AboutUs" class="text-white text-xl underlined">
+                    <span>
+                        About Us
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/History" class="text-white text-xl underlined">
+                    <span>
+                        History
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-400" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Sectors" class="text-white text-xl underlined">
+                    <span>
+                        Sectors
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-500" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Services" class="text-white text-xl underlined">
+                    <span>
+                        Services
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-600" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Projects" class="text-white text-xl underlined">
+                    <span>
+                        Projects
+                    </span>
+                </a>
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Careers" class="text-white text-xl underlined">
+                    <span>
+                        Careers
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+            'opacity-100 translate-y-0' : mobileMenu,
+            'opacity-0 translate-y-2' : !mobileMenu
+            }">
+                <a href="~/Home/Sustinabilty" class="text-white text-xl underlined">
+                    <span>
+                        Sustainability
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                    'opacity-100 translate-y-0' : mobileMenu,
+                                    'opacity-0 translate-y-2' : !mobileMenu
+                                    }">
+                <a href="~/Home/ContactUs" class="text-white text-xl underlined">
+                    <span>
+                        Contact Us
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                                            'opacity-100 translate-y-0' : mobileMenu,
+                                                            'opacity-0 translate-y-2' : !mobileMenu
+                                                            }">
+                <a href="~/Home/News" class="text-white text-xl underlined">
+                    <span>
+                        News
+                    </span>
+                </a>
+
+            </div>
+            </a>
+        </div>
+    </div>
+    <div x-on:click="dropdown = false">
+        <!-- Start / Content  -->
+        <!-- Start /  Who we are Section -->
+
+        <div class="w-full  bg-white pb-10 | lg:pb-32" style="padding-top: 13rem;">
+            <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap">
+                <div class="px-8 | lg:px-4 w-full mb-4 | lg:mb-0 lg:w-2/12">
+                    <div class="sticky top-0 left-0 w-full pt-4 flex flex-wrap">
+                        <div class="w-auto mb-3 mr-3 | lg:mr-0 lg:w-full">
+                            <a href="~/Home/News" class="inline-flex items-center">
+                                <div class="w-5 h-5 rounded-full border border-solid border-gray-200 inline-flex items-center justify-center">
+                                    <div class="w-3 h-3 rounded-full @(string.IsNullOrEmpty(selectedCategoryId) ? "bg-secondary-500" : "")"></div>
+                                </div>
+                                <span class="underlined font-light text-sm ml-2">All Categories</span>
+                            </a>
+                        </div>
+
+                        @if (Model?.Categories != null && Model.Categories.Any())
+                        {
+                            foreach (var category in Model.Categories)
+                            {
+                                var isSelected = selectedCategoryId == category.Id.ToString(); // Check if this category is selected
+
+                                <div class="w-auto mb-3 mr-3 | lg:mr-0 lg:w-full">
+                                    <a href="~/Home/News?categoryId=@category.Id" class="inline-flex items-center">
+                                        <div class="w-5 h-5 rounded-full border border-solid border-gray-200 inline-flex items-center justify-center">
+                                            <div class="w-3 h-3 rounded-full @(isSelected ? "bg-secondary-500" : "")"></div>
+                                        </div>
+                                        <span class="underlined font-light text-sm ml-2">@category.Name</span>
+                                    </a>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="inline-flex flex-wrap | lg:w-10/12">
+                    @if (Model?.News != null && Model.News.Any())
+                    {
+                        @foreach (var item in Model.News)
+                        {
+                              
+                            <div class="w-full px-8 | lg:px-4 mb-8 | sm:mb-16 sm:w-6/12">
+                                <div class="w-full relative group">
+                                    <div class="relative z-10 w-full transition transform | group-hover:-translate-y-2">
+                @*                         <a href="~/Home/News_Details?id=@item.Id" class="block w-full">
+                                            <div class="relative overflow-hidden w-full">
+                                                <img src="~/Files/Images/@(item?.Image ?? "")" alt="@item.Title">
+                                            </div>
+                                        </a> *@
+                                        <a href="~/Home/News_Details?id=@item.Id"
+                                           class="block w-full bg-gradient-to-tr from-secondary-500 to-secondary-600"  >
+                                            <div class="relative overflow-hidden w-full">
+                                                <img src="~/Files/Images/@(item?.Image ?? "")" alt="@item.Title" class="top-0 left-0 w-full h-full ">
+                                             </div>
+                                        </a>
+                                        <div class="mt-4">
+                                            <a href="~/Home/News_Details?id=@item.Id"
+                                               class="block text-xl tracking-tight font-semibold text-black mb-1 | sm:text-2xl | lg:text-3xl">
+                                                @(item?.Title ?? "")
+                                            </a>
+                                            <div class="text-sm tracking-tight text-gray-800">
+                                                @if (item.Categories != null && item.Categories.Any())
+                                                {
+                                                    var categoriesList = item.Categories.ToList();
+                                                    for (var i = 0; i < categoriesList.Count; i++)
+                                                    {
+                                                        @categoriesList[i]
+                                                        @if (i < categoriesList.Count - 1)
+                                                        {
+                                                            @: ,
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                            <div class="mt-4">
+                                                <a href="@Url.Action("News_Details", "Home", new { id = item.Id, slug = item.Title.ToLower().Replace(" ", "-") })" class="transition inline-flex items-center font-medium tracking-tight leading-tight flex-shrink-0 group underlined-group focus:outline-none lg:text-md text-primary">
+                                                    <div class="underlined mr-4">Read more</div>
+                                                    <div class="transition transform | group-hover:scale-90">
+                                                        <div class="w-12 h-12 text-md | lg:w-16 lg:h-16 lg:text-lg rounded-full flex items-center justify-center transition bg-primary bg-opacity-5 text-primary">
+                                                            <span class="mt-0.5">
+                                                                <i class="fal fa-arrow-right" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    <div class="w-full space-x-2 flex flex-wrap justify-center items-center">
+                        @if (currentPage > 1)
+                        {
+                            <a href="?pageNumber=@(currentPage - 1)" class="w-10 h-10 rounded-full border border-solid bg-gray-100 border-gray-100 inline-flex items-center justify-center font-semibold text-sm transition duration-500 hover:bg-secondary-500 hover:text-white lg:w-12 lg:h-333">
+                                ←
+                            </a>
+                        }
+
+                        @for (int i = 1; i <= totalPages; i++)
+                        {
+                            <a href="?pageNumber=@i" class="w-10 h-10 rounded-full border border-solid inline-flex items-center justify-center font-semibold text-sm transition duration-500 @(i == currentPage ? "bg-primary-500 text-white" : "hover:bg-secondary-500 hover:text-white") lg:w-12 lg:h-333">
+                                @i
+                            </a>
+                        }
+
+                        @if (currentPage < totalPages)
+                        {
+                            <a href="?pageNumber=@(currentPage + 1)" class="w-10 h-10 rounded-full border border-solid bg-gray-100 border-gray-100 inline-flex items-center justify-center font-semibold text-sm transition duration-500 hover:bg-secondary-500 hover:text-white lg:w-12 lg:h-333">
+                                →
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End / Content -->
+
+
+
+
+
+
+    </div>
+</div>

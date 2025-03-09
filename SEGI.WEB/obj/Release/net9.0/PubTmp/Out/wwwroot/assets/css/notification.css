@@ -1,0 +1,130 @@
+﻿.frame-33884,
+.frame-33884 * {
+    box-sizing: border-box;
+}
+
+.frame-33884 {
+    background: var(--colors-white, #ffffff);
+    border-radius: 16px;
+    border-style: solid;
+    border-color: var(--colors-stroke, #d0d0d0);
+    border-width: 1px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 80px;
+    position: relative;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+.vuesax-bold-notification {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.vuesax-bold-notification2 {
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+
+.notifications {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: left;
+    font-family: var(--24-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--24-bold-font-size, 24px);
+    font-weight: var(--24-bold-font-weight, 700);
+    position: relative;
+    overflow: hidden; /* Ensures the title slides out without showing overflow */
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+#notfication_title {
+    color: #0e343a !important;
+    position: relative;
+    white-space: nowrap;
+    animation: slide-right 10s linear infinite; /* Infinite sliding from left to right */
+    margin-left: 25%;
+}
+
+/* Continuous icon movement */
+.vuesax-bold-notification2 {
+    width: 50px;
+    animation: move-icon 2s ease-in-out infinite; /* Icon movement repeats infinitely */
+}
+
+/* Slide-right animation for titles */
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%); /* Start off the screen to the left */
+    }
+
+    100% {
+        transform: translateX(100%); /* End off the screen to the right */
+    }
+}
+
+/* Continuous icon moving animation */
+@keyframes move-icon {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+
+    50% {
+        transform: translateX(20px); /* Move 20px to the right */
+    }
+
+    100% {
+        transform: translateX(0); /* Return to the original position */
+    }
+}
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .frame-33884 {
+        flex-direction: column; /* Stack items vertically */
+        gap: 16px; /* Reduce the gap between elements */
+        height: auto; /* Allow the height to adjust dynamically */
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+
+    .hero-section-two {
+        padding-right: 28px !important;
+        padding-left: 5px !important;
+    }
+
+    .vuesax-bold-notification {
+        width: 36px; /* Adjust icon size for smaller screens */
+        height: 36px;
+    }
+
+    .vuesax-bold-notification2 {
+        width: 36px; /* Match parent container */
+        animation: move-icon 2s ease-in-out infinite; /* Maintain animation */
+    }
+
+    .notifications {
+        font-size: 18px; /* Reduce font size for better readability on mobile */
+        text-align: center; /* Center-align text for a cleaner look */
+        margin-left: 0; /* Remove additional margin */
+        white-space: normal; /* Allow text wrapping */
+        animation: none; /* Remove sliding animation for better usability */
+    }
+
+    #notfication_title {
+        font-size: 16px; /* Further reduce font size for titles */
+        margin-left: 0; /* Remove left margin to align with mobile layout */
+        white-space: normal; /* Allow text wrapping */
+        animation: none; /* Remove sliding animation for smaller screens */
+    }
+}

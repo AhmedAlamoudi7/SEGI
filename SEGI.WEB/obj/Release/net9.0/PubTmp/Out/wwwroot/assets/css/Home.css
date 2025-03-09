@@ -1,0 +1,424 @@
+﻿
+.slick-dots {
+    text-align: center !important;
+    margin-top: 20px !important;
+}
+
+    .slick-dots li {
+        display: inline-block !important;
+        margin: 0 5px !important;
+    }
+
+        .slick-dots li button:before {
+            font-size: 12px !important;
+            color: #000 !important;
+            opacity: 0.7 !important;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #15B5DB !important; /* Active dot color */
+            opacity: 1 !important;
+        }
+
+
+#coach-item-script {
+    display: flex !important;
+    flex-direction: column !important; /* Align children vertically */
+    max-width: 292px !important;
+    min-height: 300px !important; /* Minimum height to accommodate content */
+    height: auto !important; /* Allow height to adjust based on content */
+    padding: 16px !important;
+    align-items: flex-start !important;
+    gap: 12px !important; /* Adjust gap between elements */
+    border-radius: 16px !important;
+    background: var(--Colors-White, #FFF) !important;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08) !important;
+    position: relative !important; /* Positioning context for the button */
+    overflow: hidden !important; /* Ensure content does not overflow */
+}
+
+.coach-item {
+    display: flex !important;
+    flex-direction: column !important; /* Align children vertically */
+    max-width: 292px !important;
+    min-height: 260px !important; /* Minimum height to accommodate content */
+    height: auto !important; /* Allow height to adjust based on content */
+    padding: 16px !important;
+    align-items: flex-start !important;
+    gap: 12px !important; /* Adjust gap between elements */
+    border-radius: 16px !important;
+    background: var(--Colors-White, #FFF) !important;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08) !important;
+    position: relative !important; /* Positioning context for the button */
+    overflow: hidden !important; /* Ensure content does not overflow */
+}
+
+.coach-image {
+    width: 100% !important; /* Ensure image container takes full width */
+}
+
+    .coach-image img {
+        width: 100% !important; /* Make image responsive */
+        height: auto !important; /* Maintain aspect ratio */
+        border-radius: 12px !important; /* Rounded corners for image */
+        margin-bottom: 12px !important; /* Space between image and content */
+    }
+
+.row {
+    display: flex !important;
+    justify-content: space-between !important; /* Space out h4 elements */
+    width: 100% !important; /* Ensure full width */
+}
+
+h4 {
+    color: var(--Colors-Primary-text, #0E343A) !important;
+    font-family: 'Satoshi', sans-serif !important; /* Correct font usage */
+    font-size: 20px !important; /* Adjust font size */
+    font-weight: 700 !important;
+    line-height: 1.2 !important; /* Adjust line-height */
+}
+
+#category_name {
+    /*         font-size: 20px !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-left: 6% !important; */
+}
+
+#Buy_now {
+    width: 100% !important; /* Full width button */
+    height: 48px !important;
+    margin-top: auto !important; /* Pushes the button to the bottom */
+    border-radius: 10px !important;
+    background-color: var(--Colors-Primary, #15B5DB) !important; /* Button color */
+    color: #fff !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important; /* Ensure button is in the flow */
+    transition: background-color 0.3s ease !important;
+}
+
+.theme-btn {
+    width: 100% !important; /* Full width button */
+    height: 48px !important;
+    margin-top: auto !important; /* Pushes the button to the bottom */
+    border-radius: 10px !important;
+    background-color: var(--Colors-Primary, #15B5DB) !important; /* Button color */
+    color: #fff !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important; /* Ensure button is in the flow */
+    transition: background-color 0.3s ease !important;
+}
+
+#Buy_now:hover {
+    background-color: #1289A7 !important; /* Hover effect */
+}
+
+
+/* Ensure section takes full height of viewport minus margins/paddings */
+#additional-section {
+    height: auto !important; /* Allow height to adjust based on content */
+    min-height: 378px !important; /* Minimum height to ensure full viewport coverage */
+    display: flex !important;
+    align-items: stretch !important; /* Ensure children stretch to full height */
+    border-radius: 24px !important;
+    padding: 0 !important; /* Remove any additional padding if needed */
+}
+
+.frame-33873 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: var(--colors-stroke, #d0d0d0);
+    border-width: 1px;
+    padding: 24px;
+    width: 100%;
+    height: 100%; /* Take full height of parent */
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+    background: var(--colors-white, #ffffff);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button and purchase history to bottom */
+    margin-left: 56px;
+}
+
+.frame-48095516 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    flex: 1; /* Take available space */
+}
+
+.frame-48095505, .frame-48095506 {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.title {
+    color: var(--Colors-Primary-text, #0E343A);
+    /* 24/med */
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: url('assets/fonts/Satoshi-Italic.otf');
+    font-family: Satoshi;
+}
+
+.button {
+    background: var(--colors-primary, #15b5db);
+    border-radius: 10px;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.text {
+    color: var(--colors-white, #ffffff);
+    text-align: center;
+    font-family: var(--text-16-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--text-16-bold-font-size, 16px);
+    font-weight: var(--text-16-bold-font-weight, 700);
+    font-family: url('assets/fonts/Satoshi-Italic.otf');
+}
+
+.frame-48095518 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #d0d0d0;
+    padding-top: 16px;
+}
+
+.purchase-history {
+    color: #15b5db;
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.frame-48095517 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.text-1, .text-2 {
+    color: var(--colors-secondary-text, #68788d);
+    font-family: var(--20-reg-font-family, "Satoshi-Regular", sans-serif);
+    font-size: var(--20-reg-font-size, 20px);
+    font-weight: var(--20-reg-font-weight, 400);
+    font-family: url('assets/fonts/Satoshi-Italic.otf') !important;
+}
+/*notification*/
+
+@media (max-width: 768px) {
+    #additional-section {
+        margin-top: 10px !important; /* Remove top margin */
+        width: 100% !important; /* Take full width */
+        padding: 0 !important; /* Remove padding */
+    }
+
+    .frame-33873 {
+        margin-left: 0 !important; /* Remove left margin */
+        padding: 16px; /* Adjust padding for better spacing on mobile */
+    }
+
+    .avatar-image {
+        width: 60px !important; /* Reduce avatar size on mobile */
+        height: 60px !important;
+    }
+
+    .title {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        text-align: center; /* Center-align text */
+    }
+
+    .balance-info .title {
+        font-size: 16px; /* Adjust balance info font size */
+    }
+
+    .button {
+        height: 40px; /* Reduce button height */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+        .button .text {
+            font-size: 14px; /* Adjust font size for button text */
+        }
+
+    .frame-48095518 {
+        padding-top: 12px; /* Adjust padding for purchase history */
+        gap: 12px; /* Adjust gap between elements */
+    }
+
+    .purchase-history {
+        font-size: 16px; /* Adjust font size for purchase history */
+    }
+
+    .text-1, .text-2 {
+        font-size: 14px; /* Adjust text size for purchases */
+    }
+}
+
+
+
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Modern Section Styles */
+.modern-coach-section {
+    padding: 60px 0;
+}
+
+.modern-coach-slider {
+    overflow: hidden; /* Hide the default scrollbar */
+}
+
+.modern-card {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+    .modern-card:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+.modern-card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+    .modern-card-img-wrapper img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .modern-card-img-wrapper:hover img {
+        transform: scale(1.15) rotate(2deg);
+    }
+
+.modern-card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.modern-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+}
+
+    .modern-card-title a {
+        text-decoration: none;
+        color: #222;
+    }
+
+        .modern-card-title a:hover {
+            color: #15B5DB;
+        }
+
+.text-primary {
+    color: green !important; /* Strong color to make price pop */
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.btn-primary {
+    background-color: #15B5DB;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(21, 181, 219, 0.4);
+}
+
+    .btn-primary:hover {
+        background-color: #0d93b2;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(13, 147, 178, 0.6);
+    }
+
+    .btn-primary:active {
+        transform: translateY(2px);
+    }
+
+
+
+
+@media (max-width: 768px) {
+    .modern-card-body p, .modern-card-title {
+        font-size: 14px;
+    }
+
+    .btn-scroll-down {
+        font-size: 20px;
+    }
+}
+
+
+/* start Seach Script */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .search-form input {
+        flex: 1;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px 15px;
+    }
+
+    .search-form button {
+        border-radius: 5px;
+    }
+
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .search-form input,
+        .search-form button {
+            width: 100%;
+        }
+}
+
+/*end Search Script */

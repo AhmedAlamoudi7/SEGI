@@ -1,0 +1,429 @@
+﻿@model UpdateProcessSafetyStudiesItemDto
+
+@{
+    ViewData["Title"] = "Edit Process Safety Studies Item";
+}
+
+
+
+
+<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <!--begin::Content wrapper-->
+    <div class="d-flex flex-column flex-column-fluid">
+        <!--begin::Toolbar-->
+        <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+            <!--begin::Toolbar container-->
+            <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+                <!--begin::Page title-->
+                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                    <!--begin::Title-->
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Edit</h1>
+                    <!--end::Title-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                            <a href="~/ControlPanel/AdminProcessSafetyStudiesItem/Index" class="text-muted text-hover-primary">Process Safety Studies Item</a>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">Edit </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <!--end::Item-->
+                    </ul>
+                    <!--end::Breadcrumb-->
+                </div>
+                <!--end::Page title-->
+                <!--begin::Actions-->
+                <!--end::Actions-->
+            </div>
+            <!--end::Toolbar container-->
+        </div>
+        <!--end::Toolbar-->
+        <!--begin::Content-->
+        <div id="kt_app_content" class="app-content flex-column-fluid">
+            <!--begin::Content container-->
+            <div id="kt_app_content_container" class="app-container container-xxl">
+                <!--begin::Card-->
+                <div class="card">
+                    <!--begin::Card header-->
+                    <div class="card-header border-0 pt-6">
+                    </div>
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+                    <div class="card-body py-4">
+                        <!--begin::Modal body-->
+                        <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                            <!--begin:Form-->
+                            <form class="form" id="kt_modal_new_model_form" method="post" enctype="multipart/form-data">
+                                <input type="hidden" asp-for="Id" id="name_id" />
+
+                                <!--begin::Heading-->
+                                <div class="mb-13 text-center">
+                                    <!--begin::Title-->
+                                    <!--end::Title-->
+                                </div>
+                                <!--end::Heading-->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex flex-column mb-8 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                                    <span class="required">title</span>
+                                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <input type="text" class="form-control form-control-solid" id="name_title" name="title"  value="@Model.Title"/>
+                                                <span class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row">
+                                        <div class="col-lg-12">
+
+                                            <div class="d-flex flex-column mb-8 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                                    <span class="required">Description</span>
+                                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <div id="summernote"></div>
+                                                <input name="description" id="name_description" type="hidden" class="form-control" value="@Model.Description" />
+                                                <span asp-validation-for="Description" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Actions-->
+                                <div class="text-center">
+                                    <button type="reset" id="kt_modal_new_model_cancel" class="btn btn-light me-3">Cancel</button>
+                                    <button type="submit" id="kt_modal_new_model_submit" class="btn btn-primary">
+                                        <span class="indicator-label">Edit</span>
+                                        <span class="indicator-progress">
+                                            PleaseWait...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <!--end::Actions-->
+                            </form>
+                            <!--end:Form-->
+                        </div>
+                        <!--end::Modal body-->
+                    </div>
+                    <!--end::Card body-->
+                </div>
+                <!--end::Card-->
+            </div>
+            <!--end::Content container-->
+        </div>
+        <!--end::Content-->
+    </div>
+    <!--end::Content wrapper-->
+</div>
+
+
+<!--end:::Main-->
+@section Scripts {
+    <script src="~/Metronic/dist/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/Metronic/dist/assets/js/scripts.bundle.js"></script>
+
+    <!--end::Scrolltop-->
+    <!--end::Vendors Javascript-->
+    <!--begin::Custom Javascript(used by this page)-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--end::Modals-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--begin::Javascript-->
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="~/Metronic/dist/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/Metronic/dist/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Vendors Javascript(used by this page)-->
+    <script src="~/Metronic/dist/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Vendors Javascript-->
+    <!--end::Modals-->
+    <!--begin::Javascript-->
+    <script>var hostUrl = "~/Metronic/dist/assets/";</script>
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="~/Metronic/dist/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/Metronic/dist/assets/js/scripts.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--begin::Javascript-->
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="~/Metronic/dist/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/Metronic/dist/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Vendors Javascript(used by this page)-->
+    <script src="~/Metronic/dist/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Vendors Javascript-->
+    <!--begin::Custom Javascript(used by this page)-->
+    <!-- Load Summernote's CSS and JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Load Bootstrap (if required by Summernote) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Load Summernote -->
+    <!-- include libraries(jQuery, bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#summernote').summernote({
+                height: 300,                 // Set editor height
+                focus: true,                 // Focus on editor after initialization
+                toolbar: [
+                    ['style', ['style', 'bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    ['font', ['fontsize', 'color', 'fontname']],
+                    ['para', ['ul', 'ol', 'paragraph', 'height']],
+                    ['insert', ['link', 'video', 'table', 'hr']],
+                    ['misc', ['undo', 'redo']],
+                    ['view', ['fullscreen', 'codeview']]
+                ],
+                fontNames: ['Arial', 'Courier New', 'Georgia', 'Verdana', 'Comic Sans MS', 'Impact', 'Times New Roman', 'Tahoma'],
+                fontSizes: ['8', '10', '12', '14', '16', '18', '20', '24', '28', '36', '48', '64'],
+                placeholder: 'Type your content here...',
+                dialogsInBody: true,
+            });
+
+            // Set the Summernote content with the value of @Model.Description
+            var description = $('#name_description').val(); // Get the value from the hidden input
+            $('#summernote').summernote('code', description); // Set the value to Summernote
+
+            // Sync Summernote content to the hidden input before form submission
+            $('#kt_modal_new_model_submit').click(function () {
+                var summernoteContent = $('#summernote').summernote('code');
+                $('#name_description').val(summernoteContent); // Set the hidden input's value to Summernote's content
+            });
+        });
+    </script>
+    <!--begin::Custom Javascript(used by this page)-->
+    <script type="text/javascript">
+        "use strict";
+
+        // Class definition
+        var KTModalNewTarget = function () {
+            var submitButton;
+            var cancelButton;
+            var validator;
+            var form;
+            var modal;
+            var modalEl;
+
+            // Init form inputs
+            var initForm = function () {
+
+            }
+
+            // Handle form validation and submittion
+            var handleForm = function () {
+                // Stepper custom navigation
+
+                // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+                validator = FormValidation.formValidation(
+                    form,
+                    {
+                        fields: {
+                            'title': {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'Title'
+                                    }
+                                }
+                            } 
+                        },
+                        plugins: {
+                            trigger: new FormValidation.plugins.Trigger(),
+                            bootstrap: new FormValidation.plugins.Bootstrap5({
+                                rowSelector: '.fv-row',
+                                eleInvalidClass: '',
+                                eleValidClass: ''
+                            })
+                        }
+                    }
+                );
+                function submitId() {
+                    let id = $("#name_id").val();
+                    let data = $("#kt_modal_new_model_form").serialize();
+
+                    let title = $("#name_title").val();
+                    let description = $("#name_description").val();
+
+                    let formData = new FormData();
+                    formData.append("title", title);
+                    formData.append("description", description);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/ControlPanel/AdminProcessSafetyStudiesItem/Update/' + id,
+                        //contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        processData: false,
+                        contentType: false,
+                        data: formData,
+                        success: function (response) {
+                            if (response.success) {
+
+                                Swal.fire({
+                                    text: "AddSuccessfully",
+                                    icon: "success",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Process Safety Studies Item updated successfully",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                }).then(function (result) {
+                                    if (result.isConfirmed) {
+                                        form.reset();
+                                        window.location = "/ControlPanel/AdminProcessSafetyStudiesItem/Index";
+                                    }
+                                });
+                            } else {
+                                // DoSomethingElse()
+                                Swal.fire({
+                                    text: response.responseText,
+                                    icon: "error",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "TryAgain",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+                            };
+                        },
+                        error: function () {
+                            Swal.fire({
+                                text: "AddError",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "TryAgain",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+                        }
+                    })
+                }
+                // Action buttons
+                submitButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Validate form before submit
+                    if (validator) {
+                        validator.validate().then(function (status) {
+                            console.log('validated!');
+
+                            if (status == 'Valid') {
+                                submitButton.setAttribute('data-kt-indicator', 'on');
+
+                                // Disable button to avoid multiple click
+                                submitButton.disabled = true;
+
+                                setTimeout(function () {
+                                    submitButton.removeAttribute('data-kt-indicator');
+
+                                    // Enable button
+                                    submitButton.disabled = false;
+                                    submitId();
+                                }, 2000);
+                            } else {
+                                // Show error message.
+                                Swal.fire({
+                                    text: "AddError",
+                                    icon: "error",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+
+                cancelButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+
+                    Swal.fire({
+                        text: "CancelRequest",
+                        icon: "warning",
+                        showCancelButton: true,
+                        buttonsStyling: false,
+                        confirmButtonText: "Yes",
+                        cancelButtonText: "No",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-active-light"
+                        }
+                    }).then(function (result) {
+                        if (result.value) {
+                            window.location = "Index";
+                        } else if (result.dismiss === 'cancel') {
+                            Swal.fire({
+                                text: "NotCancelled",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok",
+                                customClass: {
+                                    confirmButton: "btn btn-primary",
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+
+            return {
+                // Public functionsa
+                init: function () {
+                    // Elements
+                    form = document.querySelector('#kt_modal_new_model_form');
+                    submitButton = document.getElementById('kt_modal_new_model_submit');
+                    cancelButton = document.getElementById('kt_modal_new_model_cancel');
+
+                    initForm();
+                    handleForm();
+                }
+            };
+        }();
+
+        // On document ready
+        KTUtil.onDOMContentLoaded(function () {
+            KTModalNewTarget.init();
+        });
+
+
+
+    </script>
+}

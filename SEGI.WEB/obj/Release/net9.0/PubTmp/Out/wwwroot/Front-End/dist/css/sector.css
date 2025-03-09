@@ -1,0 +1,73 @@
+﻿/* Container to center the grid */
+/* Grid layout for sector items */
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two items per row */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sector-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for each sector item */
+.sector-item {
+    text-align: left;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Vertical center alignment */
+    gap: 10px;
+    /* Space between image and text */
+}
+
+    /* Hover effect for sector item */
+    .sector-item:hover {
+        transform: translateY(-5px);
+    }
+
+/* Sector icon styling */
+.sector-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Sector name styling */
+.sector-name {
+    font-family: "NunitoSans-Bold", sans-serif;
+    color: #1e347a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Maintain two items per row on mobile */
+        gap: 16px;
+    }
+
+    .sector-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sector-name {
+        font-size: 16px;
+    }
+}

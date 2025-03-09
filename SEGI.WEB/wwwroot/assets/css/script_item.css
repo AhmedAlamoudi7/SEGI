@@ -1,0 +1,83 @@
+﻿#coach-item-script {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    max-width: 292px;
+    min-height: 300px; /* Minimum height to accommodate content */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 16px;
+    align-items: flex-start;
+    gap: 12px; /* Adjust gap between elements */
+    border-radius: 16px;
+    background: var(--Colors-White, #FFF);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+    position: relative; /* Positioning context for the button */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.coach-item {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    max-width: 292px;
+    min-height: 260px; /* Minimum height to accommodate content */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 16px;
+    align-items: flex-start;
+    gap: 12px; /* Adjust gap between elements */
+    border-radius: 16px;
+    background: var(--Colors-White, #FFF);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+    position: relative; /* Positioning context for the button */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.coach-image {
+    width: 100%; /* Ensure image container takes full width */
+}
+
+    .coach-image img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 12px; /* Rounded corners for image */
+        margin-bottom: 12px; /* Space between image and content */
+    }
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Space out h4 elements */
+    width: 100%; /* Ensure full width */
+}
+
+h4 {
+    color: var(--Colors-Primary-text, #0E343A);
+    font-family: 'Satoshi', sans-serif; /* Correct font usage */
+    font-size: 20px; /* Adjust font size */
+    font-weight: 700;
+    line-height: 1.2; /* Adjust line-height */
+}
+
+#category_name {
+    font-size: 20px; /* Ensure consistent font size */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 6%;
+}
+
+#Buy_now {
+    width: 100%; /* Full width button */
+    height: 48px;
+    margin-top: auto; /* Pushes the button to the bottom */
+    border-radius: 10px;
+    background-color: var(--Colors-Primary, #15B5DB); /* Button color */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure button is in the flow */
+    transition: background-color 0.3s ease;
+}
+
+    #Buy_now:hover {
+        background-color: #1289A7; /* Hover effect */
+    }

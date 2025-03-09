@@ -1,0 +1,270 @@
+﻿.frame-33882,
+.frame-33882 * {
+    box-sizing: border-box;
+}
+
+.frame-33882 {
+    padding: 0px 100px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-48095508 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-48095519 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.notifications {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: left;
+    font-family: var(--24-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--24-bold-font-size, 24px);
+    font-weight: var(--24-bold-font-weight, 700);
+    position: relative;
+    margin-right:20%;
+    overflow:auto;
+}
+
+.frame-39975 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-1265 {
+    background: var(--color-white, #ffffff);
+    border-radius: var(--space-md-1, 12px);
+    border-style: solid;
+    border-color: rgba(21, 181, 219, 0.3);
+    border-width: 3px;
+    padding: 0px var(--space-md-2, 16px) 0px var(--space-md-2, 16px);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md-2, 16px);
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 100px;
+    position: relative;
+    box-shadow: 0px 1px 15px 0px rgba(40, 106, 232, 0.04);
+}
+
+.frame-1266 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-lg, 24px);
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.frame-12652 {
+    background: var(--color-white, #ffffff);
+    border-radius: 100px;
+    border-style: solid;
+    border-color: var(--color-stroke, #e5e7eb);
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    position: relative;
+}
+
+.bell-01 {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-1264 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    position: relative;
+}
+
+.frame-1263 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.frame-1269 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.notifications2 {
+    color: var(--color-text-primary, #181818);
+    text-align: left;
+    font-family: var(--18-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--18-bold-font-size, 18px);
+    font-weight: var(--18-bold-font-weight, 700);
+    position: relative;
+    flex: 1;
+}
+
+.time {
+    color: var(--color-text-secondary, #6c737f);
+    text-align: left;
+    font-family: var(--16-regular-font-family, "Satoshi-Regular", sans-serif);
+    font-size: var(--16-regular-font-size, 16px);
+    font-weight: var(--16-regular-font-weight, 400);
+    position: relative;
+}
+
+.details {
+    color: var(--color-text-secondary, #6c737f);
+    text-align: left;
+    font-family: var(--18-medium-font-family, "Satoshi-Medium", sans-serif);
+    font-size: var(--18-medium-font-size, 18px);
+    font-weight: var(--18-medium-font-weight, 500);
+    position: relative;
+    align-self: stretch;
+}
+
+.frame-39972 {
+    background: var(--color-white, #ffffff);
+    border-radius: var(--space-md-1, 12px);
+    border-style: solid;
+    border-color: rgba(21, 181, 219, 0.3);
+    border-width: 3px;
+    padding: 0px var(--space-md-2, 16px) 0px var(--space-md-2, 16px);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md-2, 16px);
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 100px;
+    position: relative;
+    box-shadow: 0px 1px 15px 0px rgba(40, 106, 232, 0.04);
+}
+
+.bell-012 {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-39973 {
+    background: var(--color-white, #ffffff);
+    border-radius: var(--space-md-1, 12px);
+    border-style: solid;
+    border-color: var(--color-stroke, #e5e7eb);
+    border-width: 1px;
+    padding: 0px var(--space-md-2, 16px) 0px var(--space-md-2, 16px);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md-2, 16px);
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 100px;
+    position: relative;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.04);
+}
+
+.frame-1132 {
+    background: var(--color-white, #ffffff);
+    border-radius: 100px;
+    border-style: solid;
+    border-color: var(--color-stroke, #e5e7eb);
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    position: relative;
+}
+
+.bell-013 {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-39974 {
+    background: var(--color-white, #ffffff);
+    border-radius: var(--space-md-1, 12px);
+    border-style: solid;
+    border-color: var(--color-stroke, #e5e7eb);
+    border-width: 1px;
+    padding: 0px var(--space-md-2, 16px) 0px var(--space-md-2, 16px);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md-2, 16px);
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 100px;
+    position: relative;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.04);
+}
+
+.bell-014 {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: visible;
+}

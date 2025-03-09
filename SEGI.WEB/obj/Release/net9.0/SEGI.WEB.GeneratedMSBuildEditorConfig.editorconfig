@@ -1,0 +1,585 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SEGI.WEB
+build_property.RootNamespace = SEGI.WEB
+build_property.ProjectDir = C:\Users\SWORD\source\repos\SEGI\SEGI.WEB\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\SWORD\source\repos\SEGI\SEGI.WEB
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminAnalatic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQW5hbGF0aWNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminAnalatic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQW5hbGF0aWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminAnalatic/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQW5hbGF0aWNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminApplicationCareer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQXBwbGljYXRpb25DYXJlZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminApplicationCareer/_DetailsPartialCareerApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQXBwbGljYXRpb25DYXJlZXJcX0RldGFpbHNQYXJ0aWFsQ2FyZWVyQXBwbGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminArticle/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQXJ0aWNsZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminBannerAboutUs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQmFubmVyQWJvdXRVc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminBannerMain/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQmFubmVyTWFpblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCareer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2FyZWVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCareer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2FyZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCareer/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2FyZWVyXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCareer/_DetailsPartialCareers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2FyZWVyXF9EZXRhaWxzUGFydGlhbENhcmVlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCategory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCategory/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCategory/_DetailsPartialCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ2F0ZWdvcnlcX0RldGFpbHNQYXJ0aWFsQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminContactUs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ29udGFjdFVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminContactUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ29udGFjdFVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminContactUs/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ29udGFjdFVzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminContactUs/_DetailsPartialContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ29udGFjdFVzXF9EZXRhaWxzUGFydGlhbENvbnRhY3RVcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminCoreValue/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluQ29yZVZhbHVlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminFixedItem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluRml4ZWRJdGVtXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminGeneralEngineeringServicesItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluR2VuZXJhbEVuZ2luZWVyaW5nU2VydmljZXNJdGVtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminGeneralEngineeringServicesItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluR2VuZXJhbEVuZ2luZWVyaW5nU2VydmljZXNJdGVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminGeneralEngineeringServicesItem/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluR2VuZXJhbEVuZ2luZWVyaW5nU2VydmljZXNJdGVtXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminGeneralEngineeringServicesItem/_DetailsPartialGeneralEngineeringServicesItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluR2VuZXJhbEVuZ2luZWVyaW5nU2VydmljZXNJdGVtXF9EZXRhaWxzUGFydGlhbEdlbmVyYWxFbmdpbmVlcmluZ1NlcnZpY2VzSXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminHistory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluSGlzdG9yeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluSGlzdG9yeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminHistory/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluSGlzdG9yeVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminHistory/_DetailsPartialHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluSGlzdG9yeVxfRGV0YWlsc1BhcnRpYWxIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminLegacyAboutUs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluTGVnYWN5QWJvdXRVc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminNew/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluTmV3XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminNew/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluTmV3XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminNew/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluTmV3XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminNew/_DetailsPartialNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluTmV3XF9EZXRhaWxzUGFydGlhbE5ld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurCoreValueItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyQ29yZVZhbHVlSXRlbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurCoreValueItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyQ29yZVZhbHVlSXRlbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurCoreValueItem/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyQ29yZVZhbHVlSXRlbVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurCoreValueItem/_DetailsPartialOurCoreValueItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyQ29yZVZhbHVlSXRlbVxfRGV0YWlsc1BhcnRpYWxPdXJDb3JlVmFsdWVJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurCoreValue/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyQ29yZVZhbHVlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurHistoryAboutUs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VySGlzdG9yeUFib3V0VXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurMissionAboutUs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyTWlzc2lvbkFib3V0VXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminOurVisionAboutUs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluT3VyVmlzaW9uQWJvdXRVc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminPMCServicesItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUE1DU2VydmljZXNJdGVtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminPMCServicesItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUE1DU2VydmljZXNJdGVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminPMCServicesItem/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUE1DU2VydmljZXNJdGVtXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminPMCServicesItem/_DetailsPartialpmcServicesItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUE1DU2VydmljZXNJdGVtXF9EZXRhaWxzUGFydGlhbHBtY1NlcnZpY2VzSXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProcessSafetyStudiesItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvY2Vzc1NhZmV0eVN0dWRpZXNJdGVtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProcessSafetyStudiesItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvY2Vzc1NhZmV0eVN0dWRpZXNJdGVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProcessSafetyStudiesItem/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvY2Vzc1NhZmV0eVN0dWRpZXNJdGVtXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProcessSafetyStudiesItem/_DetailsProcessSafetyStudiesItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvY2Vzc1NhZmV0eVN0dWRpZXNJdGVtXF9EZXRhaWxzUHJvY2Vzc1NhZmV0eVN0dWRpZXNJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProcessSafetyStudies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvY2Vzc1NhZmV0eVN0dWRpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvamVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProject/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvamVjdFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminProject/_DetailsPartialProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluUHJvamVjdFxfRGV0YWlsc1BhcnRpYWxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminSectorItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluU2VjdG9ySXRlbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminSectorItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluU2VjdG9ySXRlbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminSectorItem/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluU2VjdG9ySXRlbVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminSectorItem/_DetailsPartialSectorItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluU2VjdG9ySXRlbVxfRGV0YWlsc1BhcnRpYWxTZWN0b3JJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminSector/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluU2VjdG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminTeam/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVGVhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminTeam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVGVhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminTeam/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVGVhbVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminTeam/_DetailsPartialTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVGVhbVxfRGV0YWlsc1BhcnRpYWxUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminUser/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminUser/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVXNlclxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminUser/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVXNlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminUser/_DetailsPartialUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluVXNlclxfRGV0YWlsc1BhcnRpYWxVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/AdminWhoWeAre/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXEFkbWluV2hvV2VBcmVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXFNoYXJlZFxfTG9naW5QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/Shared/_SliderMenuePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXFNoYXJlZFxfU2xpZGVyTWVudWVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/AboutUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Careers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJlZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Careers_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJlZXJzX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/News.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/News_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/ProjectApplyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0QXBwbHlGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Projects_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0c19EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Sectors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWN0b3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Home/Sustinabilty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdXN0aW5hYmlsdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Areas/ControlPanel/Views/Shared/_CPLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJvbFBhbmVsXFZpZXdzXFNoYXJlZFxfQ1BMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1hbi3cgf95
+
+[C:/Users/SWORD/source/repos/SEGI/SEGI.WEB/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mz1pasy7p2

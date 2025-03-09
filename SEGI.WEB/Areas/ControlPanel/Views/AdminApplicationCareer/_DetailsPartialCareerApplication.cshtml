@@ -1,0 +1,148 @@
+﻿@{
+    var media = "@media";
+}
+<style>
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.text-label {
+    font-weight: bold;
+    color: #444;
+    font-size: 18px;
+}
+
+.text-value {
+    color: #007bff;
+    font-weight: normal;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.text-blue-500 {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-blue-500:hover {
+    text-decoration: underline;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-0 {
+    border: none !important;
+}
+
+.rounded-lg {
+    border-radius: 12px !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 16px;
+        flex-direction: column;
+    }
+    .text-label {
+        font-size: 16px;
+    }
+    .text-value {
+        font-size: 16px;
+    }
+}
+
+
+
+</style>
+
+<div class="card shadow-sm border-0 rounded-lg p-4">
+    <div class="row g-0">
+        <div class="col-md-12">
+            <div class="card-body">
+                <h2 class="card-title">
+                    <span class="text-label">Full Name:</span> 
+                    <span class="text-value">@Model.FullName</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Email:</span> 
+                    <span class="text-value">@Model.Email</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Phone Number:</span> 
+                    <span class="text-value">@Model.PhoneNumber</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Position Applied For:</span> 
+                    <span class="text-value">@Model.PositionAppliedFor</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Experience Level:</span> 
+                    <span class="text-value">@Model.ExperienceLevel</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Industry:</span> 
+                    <span class="text-value">@Model.Industry</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Education:</span> 
+                    <span class="text-value">@Model.Education</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Nationality:</span> 
+                    <span class="text-value">@Model.Nationality</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Currently In Saudi Arabia:</span> 
+                    <span class="text-value">@Model.CurrentlyInSaudiArabia</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Has Valid Iqama or Work Permit:</span> 
+                    <span class="text-value">@Model.HasValidIqamaOrWorkPermit</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">LinkedIn Profile:</span> 
+                    <a href="@Model.LinkedInProfile" target="_blank" class="text-blue-500 underline">@Model.LinkedInProfile</a>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Resume:</span> 
+                    <a href="~/Files/Images/@Model.Resume" target="_blank" class="text-blue-500 underline">View Resume</a>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Career Title:</span> 
+                    <span class="text-value">@Model.Career.Title</span>
+                </h2>
+                <h2 class="card-title">
+                    <span class="text-label">Applied Date:</span> 
+                    <span class="text-value">@Model.CreatedAt</span>
+                </h2>
+                <p class="card-text mb-4">
+                    <span class="text-label">Cover Letter:</span> <br>
+                    <span class="text-value">@Html.Raw(@Model.CoverLetter)</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

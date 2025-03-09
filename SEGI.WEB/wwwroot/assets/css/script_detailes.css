@@ -1,0 +1,321 @@
+﻿.frame-48095508,
+.frame-48095508 * {
+    box-sizing: border-box;
+}
+
+.frame-48095508 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.arrow-left {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.vuesax-outline-arrow-left {
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.frame-48095519 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.categories {
+    color: var(--colors-secondary-text, #68788d);
+    text-align: left;
+    font-family: var(--24-reg-font-family, "Satoshi-Regular", sans-serif);
+    font-size: var(--24-reg-font-size, 24px);
+    font-weight: var(--24-reg-font-weight, 400);
+    position: relative;
+}
+
+.arrow-right {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.vuesax-outline-arrow-right {
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.voip {
+    color: var(--colors-secondary-text, #68788d);
+    text-align: left;
+    font-family: var(--24-reg-font-family, "Satoshi-Regular", sans-serif);
+    font-size: var(--24-reg-font-size, 24px);
+    font-weight: var(--24-reg-font-weight, 400);
+    position: relative;
+}
+
+.vuesax-outline-arrow-right2 {
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.script-name {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: left;
+    font-family: var(--24-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--24-bold-font-size, 24px);
+    font-weight: var(--24-bold-font-weight, 700);
+    position: relative;
+}
+
+.frame-33861 {
+    background: #ffffff;
+    border-radius: var(--space-lg, 24px);
+    border-style: solid;
+    border-color: var(--colors-stroke, #d0d0d0);
+    border-width: 1px;
+    padding: 80px 48px 80px 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 710px;
+    height: 660px;
+    position: relative;
+    object-fit: cover;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md-2, 16px);
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-48095520 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.heading {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: left;
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+}
+
+.heading2 {
+    color: var(--colors-primary, #15b5db);
+    text-align: left;
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+}
+
+.text {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: left;
+    font-family: var(--18-med-font-family, "Satoshi-Medium", sans-serif);
+    font-size: var(--18-med-font-size, 18px);
+    font-weight: var(--18-med-font-weight, 500);
+    position: relative;
+    align-self: stretch;
+}
+
+.text2 {
+    color: var(--colors-primary-text, #0e343a);
+    text-align: justified;
+    font-family: var(--18-med-font-family, "Satoshi-Medium", sans-serif);
+    font-size: var(--18-med-font-size, 18px);
+    font-weight: var(--18-med-font-weight, 500);
+    position: relative;
+    align-self: stretch;
+}
+
+.button {
+    background: var(--colors-primary, #15b5db);
+    border-radius: 10px;
+    padding: 10px 24px 10px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.text3 {
+    color: var(--colors-white, #ffffff);
+    text-align: center;
+    font-family: var(--text-16-bold-font-family, "Satoshi-Bold", sans-serif);
+    font-size: var(--text-16-bold-font-size, 16px);
+    font-weight: var(--text-16-bold-font-weight, 700);
+    position: relative;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .frame-48095508 {
+        gap: 24px;
+    }
+
+    .frame-48095519 {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .categories, .voip, .script-name {
+        font-size: 18px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 32px;
+        height: 32px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .frame-33861 {
+        padding: 40px 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .section-title {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .heading, .heading2 {
+        font-size: 24px;
+    }
+
+    .text, .text2 {
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    .text3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame-48095508 {
+        gap: 16px;
+    }
+
+    .frame-48095519 {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .categories, .voip, .script-name {
+        font-size: 16px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 24px;
+        height: 24px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .frame-33861 {
+        padding: 20px 16px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .section-title {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .heading, .heading2 {
+        font-size: 20px;
+    }
+
+    .text, .text2 {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 6px 12px;
+    }
+
+    .text3 {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,741 @@
+﻿@using SEGI.WEB.Core.Enums
+@model InterfaceViewModel
+@{
+    ViewData["Title"] = "Contact Us";
+    var media = "@media";
+
+    string pageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}//Home/ContactUs";
+    ViewData["MetaImage"] = $"{Context.Request.Scheme}://{Context.Request.Host}//Files/Images/" + @Model?.FixedItem?.Logo_Dark;
+
+    ViewData["MetaUrl"] = pageUrl;
+}
+
+<div x-data="{
+search: false,
+mobileMenu: false,
+dropdown: false,
+mobileDropdown: false,
+}">
+    <div class="fixed bottom-0 left-0 m-4 z-50" x-cloak>
+        <a href="#"
+           class="transition inline-flex items-center justify-center w-12 h-12 text-sm rounded-full bg-primary-600 text-white transform | hover:scale-90 | md:w-14 md:h-14"
+           x-data="{ visible: false }"
+           x-on:scroll.window="visible = window.scrollY >= window.innerHeight ? true : false"
+           x-bind:class="visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
+           x-on:click.prevent="window.scroll({ top: 0, left: 0, behavior: 'smooth' });"
+           aria-label="Back to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="absolute z-50 top-0 left-0 w-full bg-white" x-bind:class="{
+'fixed' : mobileMenu,
+'absolute' : !mobileMenu
+}">
+        <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto py-5 flex items-center justify-between | lg:py-8">
+            <div class="flex items-center px-8 | lg:px-4" data-aos="fade-y--sm">
+                <a href="~/Home/Index"
+                   class="inline-block relative transform | hover:scale-90">
+                    <img src="~/Files/Images/@Model?.FixedItem?.Logo_Dark" alt="Craft 3" class="h-8 w-auto | lg:h-24">
+                </a>
+                <div class="ml-7" x-show="!search">
+                    <div class="relative text-primary delay-900" data-aos="fade-y--sm">
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center pr-8 transform -translate-y-1 | xl:hidden">
+                <a href="#" class="text-xl text-primary"
+                   x-on:click.prevent="mobileMenu = mobileMenu ? false : true" aria-label="Navigation">
+                    <i class="fal fa-bar transform transition" aria-hidden="true" x-bind:class="{
+'fa-bars rotate-0' : !mobileMenu,
+'fa-times rotate-90' : mobileMenu
+}"></i>
+                </a>
+            </div>
+            <div class="px-8 | lg:px-4 items-center space-x-7 hidden | xl:inline-flex">
+                <div class="relative delay-100" data-aos="fade-y--sm">
+                    <a href="~/Home/index" class="text-primary tracking-tight underlined"
+                       style="color:#173C82">
+                        <span>
+                            Home
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/AboutUs" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            About Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-200" data-aos="fade-y--sm">
+                    <a href="~/Home/History" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            History
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-300" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sectors" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sectors
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-400" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Services" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Services
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-500" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Projects" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Projects
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-600" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Careers" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Careers
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/Sustinabilty" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            Sustainability
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-800" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/ContactUs" class="text-primary tracking-tight underlined underlined--visible"
+                       style="color:#173C82">
+                        <span>
+                            Contact Us
+                        </span>
+
+                    </a>
+
+                </div>
+                <div class="relative delay-900" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/News" class="text-primary tracking-tight underlined "
+                       style="color:#173C82">
+                        <span>
+                            News
+                        </span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed w-full h-full z-40 top-0 left-0 transition bg-primary flex items-center justify-center text-center opacity-0 pointer-events-none duration-500 | xl:hidden"
+         x-cloak x-bind:class="{
+'opacity-100 pointer-events-auto' : mobileMenu,
+'opacity-0 pointer-events-none' : !mobileMenu
+}">
+        <div class="">
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-100" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Index" class="text-white text-xl underlined">
+                    <span>
+                        Home
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/AboutUs" class="text-white text-xl underlined">
+                    <span>
+                        About Us
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/History" class="text-white text-xl underlined">
+                    <span>
+                        History
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-400" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Sectors" class="text-white text-xl underlined">
+                    <span>
+                        Sectors
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-500" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Services" class="text-white text-xl underlined">
+                    <span>
+                        Services
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-600" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Projects" class="text-white text-xl underlined">
+                    <span>
+                        Projects
+                    </span>
+                </a>
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                <a href="~/Home/Careers" class="text-white text-xl underlined">
+                    <span>
+                        Careers
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                        'opacity-100 translate-y-0' : mobileMenu,
+                        'opacity-0 translate-y-2' : !mobileMenu
+                        }">
+                <a href="~/Home/Sustinabilty" class="text-white text-xl underlined">
+                    <span>
+                        Sustainability
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                                'opacity-100 translate-y-0' : mobileMenu,
+                                                'opacity-0 translate-y-2' : !mobileMenu
+                                                }">
+                <a href="~/Home/ContactUs" class="text-white text-xl underlined">
+                    <span>
+                        Contact Us
+                    </span>
+                </a>
+
+            </div>
+            <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                                                        'opacity-100 translate-y-0' : mobileMenu,
+                                                                        'opacity-0 translate-y-2' : !mobileMenu
+                                                                        }">
+                <a href="~/Home/News" class="text-white text-xl underlined">
+                    <span>
+                        News
+                    </span>
+                </a>
+
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <div x-on:click="dropdown = false">
+        <!-- Start / Content  -->
+        <!-- Start/ Heading -->
+        <div class="w-full relative overflow-hidden bg-white py-0" id="hero">
+
+            @if (Model?.Article != null && Model.Article.Any())
+            {
+                @foreach (var item in Model.Article.Where(x => x?.PageType == PageType.ContactUs && x?.SectionId == 1))
+                {
+
+                    var rawDescription = item?.Description ?? "SEGI ENGINEERING GROUP INTERNATIONAL";
+                    var plainTextDescription = Regex.Replace(rawDescription, "<.*?>", ""); // Removes all HTML tags
+                    ViewData["MetaDescription"] = plainTextDescription;
+                    ViewData["MetaTitle"] = (item?.Title ?? "SEGI ENGINEERING GROUP INTERNATIONAL");
+
+                    <div class="w-full flex flex-wrap relative">
+                        <div class="absolute top-0 right-0 w-10/12 h-full z-10">
+                            <div class="absolute top-1/2 -translate-y-1/2 mt-14 transform right-0 w-full h-screen z-20 aos-init aos-animate"
+                                 data-aos="-scale">
+                                <svg viewBox="0 0 805 1074" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     class="w-full h-full">
+                                    <path d="M422.693 536.417C421.977 535.967 421.251 535.505 420.535 535.055C381.812 559.321 341.115 580.517 298.619 598.494C213.002 634.702 123.105 656.533 30.5428 663.664V665.983C123.405 658.841 213.614 636.952 299.519 600.617C342.465 582.444 383.589 560.994 422.693 536.417Z"
+                                          fill="#10CFC9"></path>
+                                    <path d="M30.5426 663.653C20.3887 664.437 10.2116 665.037 0 665.464V667.772C10.2116 667.345 20.4002 666.745 30.5426 665.96V663.653Z"
+                                          fill="#10CFC9"></path>
+                                    <path d="M572.763 413.646C526.944 459.466 476.751 499.586 422.693 533.682C423.42 534.132 424.135 534.594 424.85 535.044C478.689 500.982 528.709 460.955 574.39 415.273C639.929 349.734 693.838 275.287 735.157 193.387V188.252C693.688 271.56 639.226 347.196 572.763 413.646Z"
+                                          fill="#10CFC9"></path>
+                                    <path d="M735.169 188.263V193.398C743.915 176.056 752.119 158.39 759.723 140.401C778.785 95.3317 793.866 49.062 804.931 1.85771V0H802.993C791.927 47.5389 776.789 94.1317 757.588 139.501C750.608 156.036 743.119 172.294 735.169 188.263Z"
+                                          fill="#10CFC9"></path>
+                                    <path d="M420.535 535.055C421.262 534.605 421.977 534.144 422.693 533.694C383.577 509.117 342.465 487.666 299.519 469.505C213.625 433.17 123.417 411.281 30.5428 404.139V406.458C123.094 413.589 213.002 435.42 298.619 471.628C341.115 489.593 381.8 510.778 420.535 535.055Z"
+                                          fill="#FFD040"></path>
+                                    <path d="M424.862 535.055C424.146 535.505 423.419 535.967 422.704 536.417C476.751 570.513 526.944 610.633 572.775 656.453C639.237 722.915 693.699 798.55 735.18 881.836V876.701C693.861 794.812 639.952 720.365 574.413 654.826C528.709 609.133 478.701 569.117 424.862 535.055Z"
+                                          fill="#FFD040"></path>
+                                    <path d="M30.5426 404.127C20.3887 403.342 10.2116 402.742 0 402.315V404.623C10.2116 405.05 20.4002 405.65 30.5426 406.435V404.127Z"
+                                          fill="#FFD040"></path>
+                                    <path d="M735.169 876.701V881.836C743.131 897.817 750.608 914.063 757.6 930.598C777.262 977.075 792.677 1024.82 803.812 1073.57H804.931V1068.24C793.866 1021.04 778.785 974.767 759.723 929.698C752.108 911.709 743.915 894.043 735.169 876.701Z"
+                                          fill="#FFD040"></path>
+                                    <path d="M422.693 536.417C423.42 535.967 424.135 535.505 424.85 535.055C424.135 534.605 423.408 534.144 422.693 533.694C421.977 534.144 421.25 534.605 420.535 535.055C421.25 535.505 421.977 535.967 422.693 536.417Z"
+                                          fill="#FFD040"></path>
+                                </svg>
+                            </div>
+                            <div class="bg-secondary w-full h-full overflow-hidden">
+                                <div class="w-full h-full aos-init aos-animate" data-aos="-scale">
+
+                                    <img src="~/Files/Images/@(item?.Image??"")" class=" absolute top-0 left-0 w-full h-full object-cover object-center">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-11/12 mr-auto mt-32 mb-12 relative z-20 | lg:mt-48 lg:mb-20 lg:w-full max-w-5xl bg-white py-12 | lg:py-20">
+                            <div class="w-full px-8 | lg:ml-20">
+
+                                <div class="w-full delay-100 aos-init aos-animate" data-aos="fade-y">
+                                    <div class="max-w-lg">
+                                        <h2 class="font-sans-primary text-2xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight
+                        " data-uw-rm-heading="level" role="heading" aria-level="1">
+                                            @(item?.Title ?? "")
+                                        </h2>
+                                        <div class="w-full mt-1 | lg:mt-3 aos-init aos-animate" style="margin-top:4%;"
+                                             data-aos="fade-y">
+                                            <div class="font-sans-primary text-base | lg:text-md text-primary font-semibold leading-tighter tracking-tight"
+                                                 style="color: #3E3E3E">
+                                                @item?.Description
+                                            </div>
+                                        </div>
+                                    </div>
+         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+        </div>
+        <!-- End/ Heading -->
+         <!-- End/ Heading -->
+
+        <div class="w-full  bg-white py-0 | lg:py-16 | xl:py-24" id="2283">
+            <div class="w-full | md:w-16/12 | lg:w-16/12 | xl:w-16/12 | 2xl:w-16/12 | 3xl:w-16/12 mx-auto flex flex-wrap justify-between">
+                <div class="w-full mb-8 mt-8 | lg:mt-0 lg:mb-0 lg:w-16/12">
+                    <div class="w-full px-8 | lg:px-4 mb-2 lg:mb-3 aos-init aos-animate" data-aos="fade-y">
+                        <div class="font-sans-primary text-base | lg:text-md text-primary font-semibold leading-tighter tracking-tight
+                    ">
+                            Contact form
+                        </div>
+                    </div>
+                    <div class="w-full px-8 | lg:px-4 aos-init aos-animate" data-aos="fade-y">
+                        <div class="max-w-md">
+                            <h2 class="font-sans-primary text-2xl | lg:text-3xl | xl:text-4xl text-black font-semibold leading-tighter tracking-tight
+                    ">
+                                Get in touch
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="w-full mt-10 px-4 | lg:px-0 aos-init aos-animate" data-aos="fade-y">
+                        <div x-data="form()" x-init="dynamicForm('contact')">
+                            <form id="contact" method="post"
+                                  data-freeform=""
+                                  data-id="28cc12-form-8mNwAvrWl-xPVyPVq2B-66Ndj1GM8A1k68IIKrU4xFymdwzJoV88bkb1oXFG"
+                                  data-handle="contact" data-auto-scroll=""
+                                  data-success-message="Form has been submitted successfully!"
+                                  data-error-message="Sorry, there was an error submitting the form. Please try again.">
+                                <div class="freeform_form_handle"
+                                     style="position: absolute !important; width: 0 !important; height: 0 !important; overflow: hidden !important;"
+                                     aria-hidden="true" tabindex="-1">
+                                    <label aria-hidden="true" tabindex="-1"
+                                           for="freeform_form_handle">Leave this field blank</label><input type="text" value="" name="freeform_form_handle"
+                                                                                                           id="freeform_form_handle" aria-hidden="true" autocomplete="off"
+                                                                                                           tabindex="-1" data-uw-rm-form="nfx">
+                                </div><input type="hidden"
+                                             name="freeform_payload"
+                                             value="CUPksmZ2t++d+Zz9EmpXVjFiMDllZDMwZjc0ZWRhNzhlMTZkMzQ0ZTcyNDM3NDQ1YzRlMDQyNTliOWY5NGZkYzg2NzY2NWNkODQ5OTQxMDGyxkBFKNfHaM4M0Zf1cfWQ4Lspid+D89lmAV6ATVzwqiroqwZ4D/TzpXIcwEF0Q8aF5Nt64+yunA0oK5Fx3K7BeRYsqv9zgw9UqFhqjsEf+/5s+WCMIpM92fo0I5HupvKNQr2Pud/Gm3b3aJmD5ZnY3RmrJj7MdlkivEazZm4QcnAi+78fPq5I5HWbX0SreLL4RBM4QmaqL1AKFfsJ9dNZ7Zq5iICU2qAi0rpNQ6DVgs+CJCp2L/A8UzxWSJVFkzuLdh0AEdXZ79hwYbqJ+5QgTcCTAnWZ9zMbWRZqXunAntjZJaUNYFFEIykU/QRyprRWD4wUHu5qxKDUIddhCRXc5nD585OnL5myM1HLIqLF3Q==">
+                                <input type="hidden" name="formHash"
+                                       value="8mNwAvrWl-xPVyPVq2B-HnDv9lvz8S4avCbLYHYmWx5nQ840OCD1MD6OXx1g">
+                                <input type="hidden" name="CRAFT_CSRF_TOKEN"
+                                       value="G6ZKl6mZ_cmH0Y8V4LjIYHfJ_YiYzQod-JX_zzoYyIWQOvoeMafg613vI-CY-JOuzOHlT46Vg1cPrbLYwJxzSrmls5leLozw3GrKcWOXiLs=">
+                                <div id="28cc12-form-8mNwAvrWl-xPVyPVq2B-66Ndj1GM8A1k68IIKrU4xFymdwzJoV88bkb1oXFG"
+                                     data-scroll-anchor="" style="display: none;"></div>
+                                <input type="hidden" name="freeform-action" value="submit">
+                                <input type="hidden" name="action" value="freeform/submit">
+
+                                <div class="">
+                                    <div class="px-4 mb-8 ">
+                                        <div class="relative">
+                                            <input type="text"
+                                                   name="fullName" id="form-input-fullName" class="
+                    transition
+                    appearance-none
+                    block
+                    w-full
+                    text-primary
+                    tracking-tight
+                    border-b
+                    border-gray-400
+                    rounded-none
+                    leading-tight
+                    placeholder-gray-300
+                    placeholder-opacity-100
+                    hover:border-black
+                    focus:border-black
+                    focus:outline-none
+                    py-3" placeholder="Full Name *" required="" data-uw-rm-form="fx" aria-required="true"
+                                                   aria-label="Full Name *">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" flex flex-wrap md:flex-no-wrap">
+                                    <div class="px-4 mb-8  w-full md:w-6/12">
+                                        <input type="text"
+                                               name="phone" id="form-input-phoneNumber" class="
+                    transition
+                    appearance-none
+                    block
+                    w-full
+                    text-primary
+                    tracking-tight
+                    border-b
+                    border-gray-400
+                    rounded-none
+                    leading-tight
+                    placeholder-gray-300
+                    placeholder-opacity-100
+                    hover:border-black
+                    focus:border-black
+                    focus:outline-none
+                    py-3" placeholder="Your Phone Number *" required="" data-uw-rm-form="fx" aria-required="true"
+                                               aria-label="Your Phone Number *">
+                                    </div>
+                                    <div class="px-4 mb-8  w-full md:w-6/12">
+                                        <input type="email" name="email"
+                                               id="form-input-email" class="
+                    transition
+                    appearance-none
+                    block
+                    w-full
+                    text-primary
+                    tracking-tight
+                    border-b
+                    border-gray-400
+                    rounded-none
+                    leading-tight
+                    placeholder-gray-300
+                    placeholder-opacity-100
+                    hover:border-black
+                    focus:border-black
+                    focus:outline-none
+                    py-3" placeholder="Your email *" required="" data-uw-rm-form="fx" aria-required="true"
+                                               aria-label="Your email *">
+                                    </div>
+                                </div>
+                      
+                                <div class="">
+                                    <div class="px-4 mb-8 ">
+                                        <div class="relative">
+                                             <input type="text"
+                                                   name="title" id="form-input-phoneNumber" class="
+                    transition
+                    appearance-none
+                    block
+                    w-full
+                    text-primary
+                    tracking-tight
+                    border-b
+                    border-gray-400
+                    rounded-none
+                    leading-tight
+                    placeholder-gray-300
+                    placeholder-opacity-100
+                    hover:border-black
+                    focus:border-black
+                    focus:outline-none
+                    py-3" placeholder="title *" required="" data-uw-rm-form="fx" aria-required="true"
+                                                   aria-label="title *">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="px-4 mb-8 ">
+                                        <textarea type="textarea" name="description"
+                                                  id="form-input-message" class="
+                       transition
+                       appearance-none
+                       block
+                       w-full
+                       text-primary
+                       tracking-tight
+                       border-b
+                       border-gray-400
+                       py-3
+                       h-32
+                       rounded-none
+                       leading-tight
+                       placeholder-black
+                       placeholder-opacity-100
+                       hover:border-black
+                       focus:border-black
+                       focus:outline-none
+                    " placeholder="Message *" required="" data-uw-rm-form="fx" aria-required="true"
+                                                  aria-label="Message *"></textarea>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="px-4 mb-8  text-left">
+                                        <button class="
+                    transition
+                    inline-flex
+                    items-center
+                    font-medium
+                    tracking-tight
+                    leading-tight
+                    flex-shrink-0
+                    group
+                    underlined-group
+                    focus:outline-none
+                    lg:text-md
+                    text-black ">
+                                            <div class="underlined mr-4">
+                                                Send Enquiry
+                                            </div>
+                                            <div class="transition transform | group-hover:scale-90">
+                                                <div class="w-12 h-12 text-md | lg:w-16 lg:h-16 lg:text-lg rounded-full flex items-center justify-center transition bg-black bg-opacity-5 group-hover:bg-primary text-black | group-hover:text-white">
+                                                    <span class="mt-0.5">
+                                                        <i class="fal fa-arrow-right"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 | lg:px-4 w-full mb-8 | lg:mb-0 lg:w-5/12">
+ 
+ 
+                     <div class="max-w-sm mt-10 aos-init aos-animate" data-aos="fade-y">
+                        <div class="w-full -mb-6">
+                            <p class="w-full font-sans-primary leading-snug tracking-tight text-sm mb-6 lg:text-md text-gray-800">
+                                <strong class="font-semibold text-primary">Head office</strong>
+                            </p>
+                            <p class="w-full font-sans-primary leading-snug tracking-tight text-sm mb-6 lg:text-md text-gray-800">
+                                <strong class="font-semibold text-primary">Address:</strong>  @(Model?.FixedItem?.Location??"")
+                            </p>
+                            <p class="w-full font-sans-primary leading-snug tracking-tight text-sm mb-6 lg:text-md text-gray-800">
+                                <strong class="font-semibold text-primary">Tel:</strong>  @(Model?.FixedItem?.Phone ?? "")<strong class="font-semibold text-primary"><br>Email:</strong>  @(Model?.FixedItem?.Email ?? "")<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full mt-16 aos-init aos-animate" data-aos="fade-y">
+                        <div class="font-sans-primary text-md text-primary font-semibold leading-tighter tracking-tight
+                    ">
+                            Social
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 flex flex-wrap -mb-1">
+            
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.LinkedIn))
+                        {
+                            <div class="w-full mb-1 delay-100 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.LinkedIn" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   aria-label="LinkedIn - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.LinkedIn">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-linkedin mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        LinkedIn
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.FaceBook))
+                        {
+                            <div class="w-full mb-1 delay-200 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.FaceBook" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR"
+                                   aria-label="Facebook - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.FaceBook">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-facebook mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        Facebook
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.FaceBook))
+                        {
+                            <div class="w-full mb-1 delay-300 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.X" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR" data-uw-original-href="@Model?.FixedItem?.X"
+                                   aria-label="X - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.X">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-x-twitter mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        X
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.Youtube))
+                        {
+                            <div class="w-full mb-1 delay-300 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.Youtube" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR" data-uw-original-href="@Model?.FixedItem?.Youtube"
+                                   aria-label="Youtube - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.Youtube">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-youtube mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        Youtube
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.TikTok))
+                        {
+      
+                            <div class="w-full mb-1 delay-300 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.TikTok" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR" data-uw-original-href="@Model?.FixedItem?.TikTok"
+                                   aria-label="tiktoke - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.TikTok">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-tiktok mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        TikToke
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.Snapchat))
+                        {
+                            <div class="w-full mb-1 delay-300 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.Snapchat" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR" data-uw-original-href="@Model?.FixedItem?.Snapchat"
+                                   aria-label="snapchat - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.Snapchat">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-snapchat mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        Snapchat
+                                    </div>
+                                </a>
+                            </div>
+
+             
+                        }
+                        @if (!string.IsNullOrEmpty(Model?.FixedItem?.Instagram))
+                        { 
+                            <div class="w-full mb-1 delay-300 aos-init aos-animate" data-aos="fade-y">
+                                <a href="@Model?.FixedItem?.Instagram" target="_blank"
+                                   class="inline-flex items-center space-x-3 tracking-tight underlined text-gray-800 group | lg:text-md"
+                                   data-uw-rm-brl="PR" data-uw-original-href="@Model?.FixedItem?.Instagram"
+                                   aria-label="Instagram - open in a new tab" data-uw-rm-ext-link=""
+                                   uw-rm-external-link-id="@Model?.FixedItem?.Snapchat">
+                                    <div class="text-primary">
+                                        <i class="fa-brands fa-instagram mt-0.5"></i>
+                                    </div>
+                                    <div>
+                                        Instagram
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End / Content -->
+
+
+
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <text>
+                    Swal.fire({
+                        icon: 'success',
+                    title: 'Success!',
+                    text: '@TempData["SuccessMessage"]',
+                    confirmButtonColor: '#3085d6'
+                    });
+        </text>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <text>
+                    Swal.fire({
+                        icon: 'error',
+                    title: 'Error!',
+                    text: '@TempData["ErrorMessage"]',
+                    confirmButtonColor: '#d33'
+                    });
+        </text>
+    }
+        });
+</script>

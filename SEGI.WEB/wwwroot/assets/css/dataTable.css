@@ -1,0 +1,73 @@
+﻿/* Compact table */
+/*table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+}*/
+
+/* Table header */
+/*thead th {
+    padding: 8px !important;
+    background-color: #f0f3f5 !important;
+    text-align: left !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}*/
+
+/* Table rows */
+/*tbody td {
+    padding: 6px 8px !important;*/ /* Reduced padding for compact look */
+    /*border-bottom: 1px solid #dee2e6 !important;
+    vertical-align: middle !important;
+}*/
+
+/* Alternate row colors */
+/*tbody tr:nth-child(even) {
+    background-color: #f9f9f9 !important;
+}*/
+
+/* Hover effect on rows */
+/*tbody tr:hover {
+    background-color: #f1f1f1 !important;
+}*/
+
+/* Button styles */
+/*.btn {
+    padding: 5px 10px !important;
+    font-size: 13px !important;
+    border-radius: 4px !important;
+}*/
+
+/* Specific button colors */
+/*.btn-primary {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}*/
+
+/* Align Update and Delete buttons */
+/*td .btn-group {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 5px !important;
+}*/
+
+/* Pagination buttons */
+/*.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 4px 8px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}*/
+
+/* Search box */
+/*input[type="search"] {
+    width: 180px !important;
+    padding: 4px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+}*/

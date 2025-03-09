@@ -1,0 +1,804 @@
+﻿@using SEGI.WEB.Core.Enums
+@model InterfaceViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["MetaDescription"] = "SEGI ENGINEERING GROUP INTERNATIONAL";
+    ViewData["MetaTitle"] = "SEGI ENGINEERING GROUP INTERNATIONAL";
+    ViewData["MetaImage"] = $"{Context.Request.Scheme}://{Context.Request.Host}//Files/Images/" + @Model?.FixedItem?.Logo_Dark;
+    string pageUrl = $"{Context.Request.Scheme}://{Context.Request.Host}//Home/Index";
+    ViewData["MetaUrl"] = pageUrl;
+  }
+
+
+<link href="~/front-end/dist/css/sector.css" rel="stylesheet" />
+
+    <!-- End Google Tag Manager (noscript) -->
+        <div x-data="{
+search: false,
+mobileMenu: false,
+dropdown: false,
+mobileDropdown: false,
+}">
+            <div class="fixed bottom-0 left-0 m-4 z-50" x-cloak>
+                <a href="#"
+                    class="transition inline-flex items-center justify-center w-12 h-12 text-sm rounded-full bg-primary-600 text-white transform | hover:scale-90 | md:w-14 md:h-14"
+                    x-data="{ visible: false }"
+                    x-on:scroll.window="visible = window.scrollY >= window.innerHeight ? true : false"
+                    x-bind:class="visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
+                    x-on:click.prevent="window.scroll({ top: 0, left: 0, behavior: 'smooth' });"
+                    aria-label="Back to top">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="absolute z-50 top-0 left-0 w-full " x-bind:class="{
+'fixed' : mobileMenu,
+'absolute' : !mobileMenu
+}">
+                <div  class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto py-5 flex items-center justify-between | lg:py-8" style="margin-top: -35px;">
+                    <div class="flex items-center px-8 | lg:px-4" data-aos="fade-y--sm"><a href="~/Home/Index"
+                            class="inline-block relative transform | hover:scale-90">
+                    <img src="~/Files/Images/@Model?.FixedItem?.Logo_White" alt="Craft 3" class="h-8 w-auto | lg:h-12">
+                        </a>
+
+                    </div>
+<div class="flex items-center pr-8 transform -translate-y-1 | xl:hidden">
+
+<a href="#" class="text-xl text-white" x-on:click.prevent="mobileMenu = mobileMenu ? false : true" aria-label="Navigation" >
+<i class="fal fa-bar transform transition fa-bars rotate-0" aria-hidden="true" x-bind:class="{
+'fa-bars rotate-0' : !mobileMenu,
+'fa-times rotate-90' : mobileMenu
+}"></i>
+</a></div>
+
+                    <div class="px-8 | lg:px-4 items-center space-x-7 hidden | xl:inline-flex">
+                        <div class="relative delay-100" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Index" class="text-white tracking-tight underlined underlined--visible">
+                                <span>
+                                    Home
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-200" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/AboutUs" class="text-white tracking-tight underlined">
+                                <span>
+                                    About Us
+                                </span>
+
+                            </a>
+                        </div>
+                               <div class="relative delay-200" data-aos="fade-y--sm" x-show="!search">
+                    <a href="~/Home/History" class="text-white tracking-tight underlined">
+                                <span>
+                            History
+                                </span>
+
+                            </a>
+                        </div>
+                        <div class="relative delay-300" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Sectors" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Sectors
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-400" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Services" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Services
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-500" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Projects" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Projects
+                                </span>
+                            </a>
+                        </div>
+                        <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Careers" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Careers
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/Sustinabilty" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Sustainability
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/ContactUs" class="text-white tracking-tight underlined ">
+                                <span>
+                                    Contact Us
+                                </span>
+
+                            </a>
+
+                        </div>
+                        <div class="relative delay-700" data-aos="fade-y--sm" x-show="!search">
+                            <a href="~/Home/News" class="text-white tracking-tight underlined ">
+                                <span>
+                                    News
+                                </span>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed w-full h-full z-40 top-0 left-0 transition bg-primary flex items-center justify-center text-center opacity-0 pointer-events-none duration-500 | xl:hidden"
+                x-cloak x-bind:class="{
+'opacity-100 pointer-events-auto' : mobileMenu,
+'opacity-0 pointer-events-none' : !mobileMenu
+}">
+                <div class="">
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-100" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/Index" class="text-white text-xl underlined">
+                            <span>
+                                Home
+                            </span>
+
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/AboutUs" class="text-white text-xl underlined">
+                            <span>
+                                About Us
+                            </span>
+
+                        </a>
+
+                    </div>
+                                        <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-200" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/History" class="text-white text-xl underlined">
+                            <span>
+                                History
+                            </span>
+
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-400" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/Sectors" class="text-white text-xl underlined">
+                            <span>
+                                Sectors
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-500" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/Services" class="text-white text-xl underlined">
+                            <span>
+                                Services
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-600" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/Projects" class="text-white text-xl underlined">
+                            <span>
+                                Projects
+                            </span>
+                        </a>
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+'opacity-100 translate-y-0' : mobileMenu,
+'opacity-0 translate-y-2' : !mobileMenu
+}">
+                        <a href="~/Home/Careers" class="text-white text-xl underlined">
+                            <span>
+                                Careers
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                    'opacity-100 translate-y-0' : mobileMenu,
+                    'opacity-0 translate-y-2' : !mobileMenu
+                    }">
+                        <a href="~/Home/Sustinabilty" class="text-white text-xl underlined">
+                            <span>
+                                Sustainability
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                            'opacity-100 translate-y-0' : mobileMenu,
+                                            'opacity-0 translate-y-2' : !mobileMenu
+                                            }">
+                        <a href="~/Home/ContactUs" class="text-white text-xl underlined">
+                            <span>
+                                Contact Us
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="w-full mb-2 transform translate-y-2 transition opacity-0 delay-700" x-bind:class="{
+                                                                    'opacity-100 translate-y-0' : mobileMenu,
+                                                                    'opacity-0 translate-y-2' : !mobileMenu
+                                                                    }">
+                        <a href="~/Home/News" class="text-white text-xl underlined">
+                            <span>
+                                News
+                            </span>
+                        </a>
+
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div x-on:click="dropdown = false">
+                <div class="w-full h-screen-fix z-50 fixed top-0 left-0 bg-primary flex items-center justify-center transition selection--white"
+                    x-ref="pageIntroElement" x-data="pageIntro()"
+                    x-init="pageIntroInit($refs.pageIntroElement); Cookies.set('pageIntro-567589', 'false', { expires: 1 });"
+                    x-show="visible">
+                    <div>
+                        <div class=" | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                SEGI.</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                ENGINEERING</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                GROUP</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                INTERNATIONAL</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                INTERNATIONAL</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                INTERNATIONAL</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                INTERNATIONAL</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                INTERNATIONAL</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                        <div class="hidden | js-page-intro__item" x-cloak>
+                            <div class="font-sans-primary text-7xl text-white font-semibold leading-tighter tracking-tight
+">
+                                Within</div>
+                        </div>
+                    </div>
+                </div>
+
+
+        @if (Model.BannerMain.BannerContentType == BannerContentType.Image.ToString() && Model.BannerMain.BannerPageType == BannerPageType.Home.ToString())
+        {
+            <div class="w-full relative bg-primary pb-10 h-screen-fix-70 overflow-hidden flex flex-col justify-center | sm:pt-10 | lg:pt-0 lg:pb-20 lg:h-screen-fix">
+
+                <!-- Image instead of video -->
+                <div class="relative z-10 w-full h-full aspect-ratio-16/9 | lg:absolute lg:top-0 lg:left-0 lg:pb-0 lg:overflow-hidden">
+                    <img src="~/Files/Images/@Model?.BannerMain?.Image" alt="Your Image Description" class="w-full h-full object-cover">
+                </div>
+
+                <div class="w-full absolute z-30 bottom-0 right-0">
+                    <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex justify-end delay-500"
+                         data-aos="fade-y"></div>
+                </div>
+                <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto relative z-20">
+                    <div class="px-8 | lg:px-4 w-full selection--white text-center mt-10 | lg:mt-20"></div>
+                </div>
+            </div>
+        }else if (Model.BannerMain.BannerContentType == BannerContentType.Video.ToString() && Model.BannerMain.BannerPageType == BannerPageType.Home.ToString())
+        {
+                <div class="w-full relative bg-primary pb-10 h-screen-fix-70 overflow-hidden flex flex-col justify-center | sm:pt-10 | lg:pt-0 lg:pb-20 lg:h-screen-fix">
+                    <div
+                        class="relative z-10 w-full h-full aspect-ratio-16/9 video | lg:absolute lg:top-0 lg:left-0 lg:pb-0 lg:overflow-hidden">
+                        <iframe id="js-video__567594" class="w-full h-full absolute top-0 left-0"
+                            src="@Model?.BannerMain?.Content"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"
+                            title="Video"></iframe>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-10 h-10 flex items-center justify-center m-10 text-white text-xl cursor-pointer z-40 hidden | md:block | js-video__audio">
+                        <i class="far fa-volume-off | js-video__audio-icon"></i>
+                    </div>
+                    <div class="w-full absolute z-30 bottom-0 right-0">
+                        <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex justify-end delay-500"
+                            data-aos="fade-y"></div>
+                    </div>
+                    <div
+                        class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto relative z-20">
+                        <div class="px-8 | lg:px-4 w-full selection--white text-center mt-10 | lg:mt-20"></div>
+                    </div>
+                </div>
+
+
+        }
+
+        <script src="~/Front-End/player.vimeo.com/api/player.js"></script>
+                <!-- Start /  Who we are Section -->
+                <div class="w-full  bg-white py-0 | lg:py-12 | xl:py-12" id="593829">
+                    <div
+                        class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between items-center">
+                        <div class="px-8 | lg:px-4 w-full mb-4 | lg:mb-0 lg:w-5/12">
+                            <div class="w-full mt-8 mb-1 | lg:mt-0 lg:mb-3 aos-init aos-animate" data-aos="fade-y">
+                            </div>
+                            <div class="w-full delay-100 aos-init aos-animate" data-aos="fade-y">
+                                <div class="max-w-md">
+                                    <h2
+                                        class="font-sans-primary text-3xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight">
+                                        Who we are</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full relative overflow-hidden bg-white | lg:pt-16 | xl:pt-24" id="587762">
+
+                    <div
+                        class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between items-center">
+                    </div>
+                    <div class="absolute z-10 top-0 right-0 w-full | lg:w-10/12 h-full bg-gray-100"></div>
+                    <div class="w-full flex flex-wrap relative">
+                        <div
+                            class="relative top-0 left-0 z-10 w-full h-screen-fix-50 | lg:absolute lg:h-full lg:w-8/12">
+                            <div
+                                class="bg-gradient-to-tr from-secondary-500 to-secondary-600 w-full h-full overflow-hidden">
+                                <div class="w-full h-full aos-init aos-animate" data-aos="-scale">
+                                  <img src="~/Files/Images/@(Model?.WhoWeAre?.Image ?? "Default Image")" alt="About US-Cover"
+                                        class="absolute top-0 left-0 w-full h-full object-cover object-center" />
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="ml-auto bg-white relative z-20 w-full p-8 | md:p-14 | lg:p-0 lg:py-28 lg:mt-32 lg:w-8/12">
+                            <div class="w-full lg:ml-20">
+                                <div class="w-full mb-3 aos-init aos-animate" data-aos="fade-y">
+                                </div>
+                                <div class="w-full delay-100 aos-init aos-animate" data-aos="fade-y">
+                                    <div class="max-w-xl">
+                                        <h2
+                                            class="font-sans-primary text-2xl | lg:text-3xl | xl:text-4xl text-black font-semibold leading-tighter tracking-tight ">
+                                    @(Model?.WhoWeAre?.Title ?? "Default Title")
+                                </h2>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 delay-200 | lg:mt-6 aos-init aos-animate" data-aos="fade-y">
+                                    <div class="max-w-xl">
+                                        <div class="w-full -mb-6">
+                                            <p
+                                                class="w-full font-sans-primary leading-snug tracking-tight text-sm mb-6 lg:text-md text-gray-800">
+                                                @Html.Raw(Model?.WhoWeAre?.Description ?? "Default Description") .</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--End /  Who we are Section -->
+                <div class="w-full  bg-white pt-0" id="582357">
+                    <div
+                        class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto relative selection--white">
+                        <div
+                            class="w-full h-full absolute top-0 left-0 z-10 bg-gradient-to-tr from-secondary-500 to-secondary-600 overflow-hidden">
+                            <div class="w-full h-full" data-aos="-scale">
+                                <img src=" " alt="SEGI energy future 1"
+                                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-full  bg-white pt-0 | lg:pt-16 | xl:pt-24" id="594534">
+                    <div x-data="{ lightbox: null }">
+                        <div class="fixed flex items-center justify-center w-full h-full top-0 left-0 z-60 opacity-0 pointer-events-none transition duration-300"
+                            x-cloak
+                            x-bind:class="{ 'opacity-100 pointer-events-auto' : lightbox == '594534', 'opacity-0 pointer-events-none' : lightbox != '594534' }">
+                            <div class="absolute z-10 w-full h-full top-0 left- bg-primary-700 bg-opacity-90 max-h-"
+                                x-on:click="lightbox = null; "></div>
+                            <div class="w-full max-h-screen overflow-scroll max-w-4xl  bg-primary-600 relative z-20 opacity-0 translate-y-5 transform transition ease-smooth-out duration-500 | lg:overflow-auto lg:max-h-none"
+                                x-bind:class="{ 'opacity-100 translate-y-0 delay-200' : lightbox == '594534', 'opacity-0 translate-y-5' : lightbox != '594534' }">
+                                <div class="absolute top-0 right-0 z-10">
+                                    <a href="#" class="w-12 h-12 inline-flex items-center justify-center text-white"
+                                        x-on:click.prevent="lightbox = null; " aria-label="Close Modal">
+                                        <i class="far mt-0.5 fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="w-full aspect-ratio-16/9">
+                                    <iframe src="@(Model?.CoreValue?.Link_Video ?? "Default Link")"
+                                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                        class="w-full h-full absolute top-0 left-0" title="Video"></iframe>
+                                    <script src="~/Front-End/player.vimeo.com/api/player.js"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full relative flex flex-wrap bg-gradient-to-tr from-secondary-500 to-secondary-600 selection--white items-center overflow-hidden | lg:h-screen-fix lg:pt-10">
+                            <div class="w-full relative top-0 left-0 z-10 h-screen-fix-50 | lg:h-full lg:absolute"
+                                data-aos="-scale">
+                        <img src="~/Files/Images/@(Model?.CoreValue?.Image ?? "Default Image")" alt="JMG Launch Strategy 2022"
+                                    class="w-full h-full absolute top-0 left-0 object-cover object-center" />
+                                <div class="w-full h-full bg-black absolute bottom-0 left-0 z-10 opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                    <a href="#"
+                                        class="w-32 h-32 bg-white bg-opacity-20 rounded-full text-white text-xl relative z-20 flex items-center justify-center transform | hover:scale-90 | lg:mb-20"
+                                        x-on:click.prevent="lightbox = '594534'" aria-label="Play Video">
+                                        <i class="fal fa-play mt-1 ml-1" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full relative bottom-0 right-0 bg-white p-8 z-20 flex flex-wrap space-x-4 | md:p-14 | lg:absolute lg:w-6/12 lg:px-20 lg:py-16">
+                                <div class="flex items-center space-x-4  " data-aos="fade-y">
+                                    <div
+                                        class="font-sans-primary text-base | lg:text-md text-primary font-semibold leading-snug tracking-tight">
+                                        @(Model?.CoreValue?.Title ?? "Default Title") </div>
+                                </div>
+                                <div class="mb-6 delay-100" data-aos="fade-y">
+                                    <div class="text-sm tracking-tight text-black | lg:text-md">
+                                @(Html.Raw(Model?.CoreValue?.Description ?? "Default Description"))
+                                .</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Start / Sectors -->
+                <div class="w-full  bg-white pt-0 | lg:pt-16 | xl:pt-24" id="594534"></div>
+                <div
+                    class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between items-center">
+                    <div class="px-8 | lg:px-4 w-full mb-4 | lg:mb-0 lg:w-5/12">
+                        <div class="w-full delay-100" data-aos="fade-y">
+                            <div class="max-w-md">
+                                <h2
+                                    class="font-sans-primary text-3xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight">
+                            @(Model?.Sector?.Title ?? "Default Title")
+                        </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full flex flex-col items-end justify-end relative | lg:flex-row flex-col | lg:flex-row-reverse">
+
+                    <div class="relative top-0 right-0 w-full h-screen-fix-50 | lg:h-full lg:w-5/12 lg:absolute">
+                        <div class="bg-gradient-to-tr from-secondary-500 to-secondary-600 w-full h-full">
+                    <img src="~/Files/Images/@(Model?.Sector?.Image ?? "Default Image")" alt="Gastech image"
+                                class="w-full h-full object-cover object-center">
+                        </div>
+                    </div>
+                    <div class="w-full | lg:w-10/12 p-8 | md:p-14 | lg:px-0 lg:py-28 lg:mt-28 ">
+                        <div class="w-full | lg:w-6/12 mr-auto lg:ml-20">
+
+                            <div class="sector-grid">
+
+
+
+                        @if (Model?.SectorItems != null && Model.SectorItems.Any())
+                        {
+                        @foreach (var item in Model.SectorItems)
+                        {
+                            <div class="sector-item">
+                                <div class="sector-content">
+                                    <img class="sector-icon" src="~/Files/Images/@item.Icon" alt="@item.Title">
+                                </div>
+                                <div class="sector-name">@item.Title</div>
+                            </div>
+                        }
+                        }
+                        
+       
+                    
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- End / Sectors -->
+
+        <!-- Start/ Services Section -->
+        <div class="w-full  bg-white py-0 | lg:py-12 | xl:py-12" id="593829">
+            <div
+                class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between items-center">
+                <div class="px-8 | lg:px-4 w-full mb-4 | lg:mb-0 lg:w-5/12">
+                    <div class="w-full delay-100" data-aos="fade-y">
+                        <div class="max-w-md">
+                            <h2
+                                class="font-sans-primary text-3xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight">
+                                Services</h2>
+
+                        </div>
+                        <div class="text-sm tracking-tight text-black | lg:text-md
+                                ">
+                            Saudi Engineering Group International provides tailored and value-added services in the
+                            sectors we are involved in covering various phases of the project from concept to operation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div   class="w-full | md:w-11.5/12 | lg:w-11.5/12 | xl:w-11.5/12 | 2xl:w-11.5/12 | 3xl:w-10.5/12 ml-auto mt-8 | lg:mt-16 | js-slideshow-593829 flex flex-wrap justify-start items-stretch gap-8">
+
+
+        @if (Model?.GeneralEngineeringServicesItems != null && Model.GeneralEngineeringServicesItems.TakeLast(3).Any())
+        {
+            @foreach (var item in Model.GeneralEngineeringServicesItems.TakeLast(3))
+            {
+                <div class="w-full px-8 | lg:px-4 mb-8 relative z-10 | sm:mb-16 sm:w-6/12 | lg:w-4/12">
+                    <div class="w-full delay-600" data-aos="fade-x">
+                        <a href="~/Home/Services" class="block relative w-full group overflow-hidden group" data-uw-rm-brl="PR">
+                            <div class="bg-gradient-to-tl from-primary-500 to-primary-600 overflow-hidden">
+                                <div class="transition transform | group-hover:scale-125 group-hover:opacity-50">
+                                    <div class="relative overflow-hidden w-full" style="padding-top: 100%;">
+                                        <picture class="absolute top-0 left-0 w-full h-full">
+                                            <img src="~/Files/Images/@item.Image" style="object-fit: cover;width:100%"
+                                                 class="lazy-load js-lazy-load entered lazy-load--loaded"
+                                                 data-uw-rm-alt-original="Saint John" data-uw-rm-alt="ALT"
+                                                 data-ll-status="loaded" sizes="100vw">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative bottom-0 left-0 px-5 pt-4 pb-4 flex items-end bg-white w-full transition transform duration-700 | lg:group-hover:translate-y-4 | lg:w-9/12 lg:absolute | xl:px-8 xl:pt-4 xl:pb-8">
+                                <div class="relative z-10">
+                                    <h2 style="color: #1E347A;
+font-feature-settings: 'liga' off, 'clig' off;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px;
+margin-bottom:5%;
+        ">
+                                        @item.Title
+                                    </h2>
+                                    <div class="text-md tracking-tight leading-tight text-black mb-4 | lg:text-xl | xl:text-2xl">
+                                         @Html.Raw(item.Description)
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            }
+        }
+
+
+
+
+
+            </div>
+
+        </div>
+        <!-- End/ Services Section -->
+
+        <!-- Start/ Line Analasis -->
+        <div class="w-full  gray-100 pt-0 | lg:pt-16 | xl:pt-24" id="567596">
+
+            <div class="w-full" x-data="{}">
+                <div class="w-full  text-white  relative z-30 transform p-8 | md:p-14 | lg:w-11/12 lg:-translate-y-1/2 lg:pl-16 lg:py-16"
+                    style="background-color:#173C82">
+                    <div
+                        class="w-full flex flex-wrap justify-between relative -mb-4 | lg:-mb-8 | 2xl:mb-0 2xl:flex-row 2xl:flex-nowrap 2xl:justify-between">
+
+                @if (Model?.Analatics != null && Model.Analatics.Any())
+                {
+                    @foreach (var item in Model.Analatics)
+                    {
+
+
+                        <div class="delay-100 w-full mb-6 | lg:pr-12 lg:mb-8 lg:w-5/12 2xl:flex-1 2xl:pr-6 2xl:mb-0 2xl:w-auto aos-init aos-animate"
+                        data-aos="fade-y">
+                            <a href="#"
+                            class="inline-flex items-center justify-between underlined-multiline-group group w-full | 2xl:justify-center">
+                                <div class="mr-8">
+                                    <div
+                                    class="w-auto text-md text-white tracking-tight max-w-xs leading-tight mb-1 underlined-multiline">
+                                        <span>
+                                           @item.Number
+                                        </span>
+                                    </div>
+                                    <div class="text-white text-opacity-80 tracking-tight">
+                                        @item.Title</div>
+                                </div>
+                                <div class="transform transition flex-shrink-0 | group-hover:scale-90">
+                                    <div
+                                    class="w-12 h-12 text-md | lg:w-16 lg:h-16 lg:text-lg flex items-center justify-center transition  bg-opacity-20 | group-hover:bg-opacity-100 text-white | group-hover:text-black">
+                                        <span class="mt-0.5">
+                                            |
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+                }
+            </div>
+                </div>
+            </div>
+        </div>
+        <!-- End/ Line Analasis -->
+
+        <!-- Start/ News Section -->
+        <div class="w-full  bg-white py-0 | lg:py-12 | xl:py-12" id="593829">
+            <div
+                class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between items-center">
+                <div class="px-8 | lg:px-4 w-full mb-4 | lg:mb-0 lg:w-5/12">
+                    <div class="w-full delay-100" data-aos="fade-y">
+                        <div class="max-w-md">
+                            <h2
+                                class="font-sans-primary text-3xl | lg:text-4xl text-black font-semibold leading-tighter tracking-tight">
+                                Latest News & Insights</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full | md:w-11.5/12 | lg:w-11.5/12 | xl:w-11.5/12 | 2xl:w-11.5/12 | 3xl:w-10.5/12 ml-auto mt-8 | lg:mt-16 | js-slideshow-593829 flex flex-wrap justify-start items-stretch gap-8">
+
+
+        @if (Model?.News != null && Model.News.TakeLast(3).Any())
+        {
+            @foreach (var item in Model.News.TakeLast(3))
+            {
+
+                <div class="w-full px-8 | lg:px-4 mb-8 relative z-10 | sm:mb-16 sm:w-6/12 | lg:w-4/12">
+                    <div class="w-full delay-600" data-aos="fade-x">
+                        <a href="~/Home/News_Details/@item.Id" class="block relative w-full group overflow-hidden group" data-uw-rm-brl="PR">
+                            <div class="bg-gradient-to-tl from-primary-500 to-primary-600 overflow-hidden">
+                                <div class="transition transform | group-hover:scale-125 group-hover:opacity-50">
+                                    <div class="relative overflow-hidden w-full" >
+                                             <img class=" top-0 left-0 w-full h-full " src="~/Files/Images/@item.Image" data-uw-rm-alt="ALT" >
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="text-sm tracking-tight text-primary-500 font-semibold">
+                                    Press Releases &amp; Featured Stories</div>
+                                <a href="~/Home/News_Details/@item.Id">
+                                    @item.Title
+                                </a>
+                                <div class="text-sm tracking-tight text-gray-800">
+                                    @item?.Short_Description
+                                </div>
+                                <div class="mt-4">
+                                    <a href="~/Home/News_Details/@item.Id" class="
+                                        transition
+                                        inline-flex
+                                        items-center
+                                        font-medium
+                                        tracking-tight
+                                        leading-tight
+                                        flex-shrink-0
+                                        group
+                                        underlined-group
+                                        focus:outline-none
+                                        lg:text-md
+                                        text-primary ">
+                                        <div class="underlined mr-4">
+                                            Read more</div>
+                                        <div class="transition transform | group-hover:scale-90">
+                                            <div
+                                                class="w-12 h-12 text-md | lg:w-16 lg:h-16 lg:text-lg rounded-full flex items-center justify-center transition bg-primary bg-opacity-5 text-priamry">
+                                                <span class="mt-0.5">
+                                                    <i class="fa-duotone fa-solid fa-arrow-right-from-line"></i>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                }
+                
+            }
+
+
+            </div>
+
+        </div>
+        <!-- End/ News Section -->
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+ 

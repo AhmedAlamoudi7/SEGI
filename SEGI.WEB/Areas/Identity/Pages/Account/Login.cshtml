@@ -1,0 +1,90 @@
+﻿@page
+@using SEGI.Core.Constants
+@using SEGI.Web.Areas.Identity.Pages.Account
+@model LoginModel
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html direction="ltr" style="direction: ltr; ">
+<head>
+    <base href="../../../">
+    <meta charset="utf-8" />
+    <title>Login </title>
+    <meta name="description" content="Initialized via remote ajax json data" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="@Constant.Links.logoIcon" />
+
+ 
+        <link href="~/assets/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="~/assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/login/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/login/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+         <link href="~/assets/login/layout/brand/light.css" rel="stylesheet" type="text/css" />
+         <link href="~/assets/login/layout/aside/light.css" rel="stylesheet" />
+         <link href="~/assets/Login/css/login-1.css" rel="stylesheet" type="text/css" />
+
+
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="@Constant.Links.logoIcon" />
+
+</head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+    <!--begin::Main-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Login-->
+        <div class="login login-4 login-signin-on d-flex flex-row-fluid" id="kt_login">
+            <div class="d-flex flex-center flex-row-fluid bgi-size-cover bgi-position-top bgi-no-repeat" style="background-image: url('/bg-3.jpg');">
+                <div class="login-form text-center p-7 position-relative overflow-hidden">
+                    <!--begin::Login Header-->
+                    <div class="d-flex flex-center mb-15">
+                        <a href="#">
+                            <img src="~/SEGI_Full_Dark.png" style="max-height:175px;" class="max-h-75px" alt="" />
+                        </a>
+                    </div>
+                    <!--end::Login Header-->
+                    <!--begin::Login Sign in form-->
+                    <div class="login-signin">
+                        <div class="mb-20">
+                            <h3>Sign In To Admin</h3>
+                            <div class="text-muted font-weight-bold">Enter your details to login to your account:</div>
+                        </div>
+                        <form method="post" class="form" id="kt_login_signin_form">
+                            <div class="form-group mb-5">
+                                <input class="form-control h-auto form-control-solid py-4 px-8" asp-for="Input.Email" type="email" placeholder="Email" autocomplete="off" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-5">
+                                <input class="form-control h-auto form-control-solid py-4 px-8" asp-for="Input.Password" type="password" placeholder="Password" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4" asp-route-returnUrl="~/ControlPanel/AdminHome/Index">Sign In</button>
+                        </form>
+                    </div>
+                    <!--end::Login Sign in form-->
+                </div>
+            </div>
+        </div>
+        <!--end::Login-->
+    </div>
+    <!--end::Main-->
+    <script src="~/assets/login/js/login-general.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+﻿@model InterfaceViewModel
+
+<!--start/  Footer -->
+<div class="w-full bg-primary selection--white pt-8 | lg:pt-28" x-data>
+    <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap justify-between">
+       
+        <div class="px-8 | lg:px-4 w-full mb-12 | lg:mb-0 lg:w-5/12">
+            <a href="~/Home/Index" data-aos="fade-y--sm">
+                <img src="~/Files/Images/@Model?.FixedItem?.Logo_White" alt="Craft 3" class="h-12 w-auto | lg:h-16">
+            </a>
+            <div class="w-full flex flex-wrap" style="margin-top:2%;">
+
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.Email))
+                {
+                <div class="w-full mb-1 delay-1" data-aos="fade-y--sm">
+                    <a href="mailto:@Model?.FixedItem?.Email?" class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-solid fa-envelope mt-0.5"></i>
+                        </span>
+                        <span>
+                            @Model?.FixedItem?.Email
+                        </span>
+                    </a>
+                </div>
+                }
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.Location)){
+                <div class="w-full mb-1 delay-1" data-aos="fade-y--sm">
+                    <div class="inline-flex items-center space-x-3 tracking-tight text-white">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-solid fa-location-dot mt-0.5"></i>
+                        </span>
+                        <span>
+                            @Model?.FixedItem?.Location
+                        </span>
+                    </div>
+                </div>
+                }
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.Phone))
+            {
+                <div class="w-full mb-1 delay-1" data-aos="fade-y--sm">
+                    <a href="tel:@Model?.FixedItem?.Phone?" class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-solid fa-phone mt-0.5"></i>
+                        </span>
+                        <span>
+                            @Model?.FixedItem?.Phone
+                        </span>
+                    </a>
+                </div>
+                }
+            </div>
+
+        </div>
+
+        <div class="px-8 | lg:px-4 w-full mb-10 | md:w-6/12 | lg:mb-0 lg:w-auto lg:flex-1">
+            <div class="mb-4" data-aos="fade-y--sm">
+                <div class="font-sans-primary text-lg | lg:text-xl text-white font-semibold leading-tighter tracking-tigh">
+                    Follow
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap">
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.LinkedIn))
+                {
+                    <div class="w-full mb-1 delay-1" data-aos="fade-y--sm">
+                        <a href="@Model?.FixedItem?.LinkedIn" target="_blank"
+                           class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                            <span class="w-5 opacity-20 transition | group-hover:opacity-100">
+                                <i class="fa-brands fa-linkedin mt-0.5"></i>
+                            </span>
+                            <span>
+                                LinkedIn
+                            </span>
+                        </a>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.FaceBook))
+                {
+                    <div class="w-full mb-1 delay-2" data-aos="fade-y--sm">
+                        <a href="@Model?.FixedItem?.FaceBook" target="_blank"
+                           class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                            <span class="w-5 opacity-20 transition | group-hover:opacity-100">
+                                <i class="fa-brands fa-facebook mt-0.5"></i>
+                            </span>
+                            <span>
+                                Facebook
+                            </span>
+                        </a>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.X))
+                {
+                    <div class="w-full mb-1 delay-3" data-aos="fade-y--sm">
+                        <a href="@Model?.FixedItem?.X" target="_blank"
+                           class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                            <span class="w-5 opacity-20 transition | group-hover:opacity-100">
+                                <i class="fa-brands fa-x-twitter mt-0.5"></i>
+                            </span>
+                            <span>
+                                X
+                            </span>
+                        </a>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(Model?.FixedItem?.Youtube))
+                {
+                    <div class="w-full mb-1 delay-6" data-aos="fade-y--sm">
+                        <a href="@Model?.FixedItem?.Youtube" target="_blank"
+                           class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                            <span class="w-5 opacity-20 transition | group-hover:opacity-100">
+                                <i class="fa-brands fa-youtube mt-0.5"></i>
+                            </span>
+                            <span>
+                                YouTube
+                            </span>
+                        </a>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+        <div class="px-8 | lg:px-4 w-full mb-10 | md:w-6/12 | lg:mb-0 lg:w-auto lg:flex-1">
+            <div class="mb-4" data-aos="fade-y--sm">
+                <div class="font-sans-primary text-lg | lg:text-xl text-white font-semibold leading-tighter tracking-tight">
+                    
+                </div>
+            </div>
+            @if (!string.IsNullOrEmpty(Model?.FixedItem?.TikTok))
+            {
+                <div class="w-full mb-1 delay-1" data-aos="fade-y--sm">
+                    <a href="@Model.FixedItem.TikTok" target="_blank"
+                       class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-brands fa-tiktok mt-0.5"></i>
+                        </span>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model?.FixedItem?.Snapchat))
+            {
+                <div class="w-full mb-1 delay-2" data-aos="fade-y--sm">
+                    <a href="@Model.FixedItem.Snapchat" target="_blank"
+                       class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-brands fa-snapchat mt-0.5"></i>
+                        </span>
+                        <span>Snapchat</span>
+                    </a>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model?.FixedItem?.Instagram))
+            {
+                <div class="w-full mb-1 delay-3" data-aos="fade-y--sm">
+                    <a href="@Model.FixedItem.Instagram" target="_blank"
+                       class="inline-flex items-center space-x-3 tracking-tight text-white group">
+                        <span class="w-5 opacity-20 transition group-hover:opacity-100">
+                            <i class="fa-brands fa-instagram mt-0.5"></i>
+                        </span>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            }
+ 
+            </div>
+
+        <div class="px-8 | lg:px-4 w-full mb-10 | md:w-6/12 | lg:mb-0 lg:w-auto lg:flex-1">
+            <div class="mb-4" data-aos="fade-y--sm">
+                <div class="font-sans-primary text-lg | lg:text-xl text-white font-semibold leading-tighter tracking-tight">
+                    Explore
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap">
+                <div class="w-full mb-1 delay-2" data-aos="fade-y--sm">
+                    <a href="~/Home/AboutUs" class="inline-block tracking-tight underlined text-white">
+                        About Us
+                    </a>
+                </div>
+                <div class="w-full mb-1 delay-3" data-aos="fade-y--sm">
+                    <a href="~/Home/Sustinabilty"
+                       class="inline-block tracking-tight underlined text-white">
+                        Sustainability
+                    </a>
+                </div>
+                <div class="w-full mb-1 delay-4" data-aos="fade-y--sm">
+                    <a href="~/Home/Careers" class="inline-block tracking-tight underlined text-white">
+                        Join Us
+                    </a>
+                </div>
+                <div class="w-full mb-1 delay-5" data-aos="fade-y--sm">
+                    <a href="~/Home/News"
+                       class="inline-block tracking-tight underlined text-white">
+                        News &amp; Insights
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+ 
+
+    <div class="w-full | md:w-11/12 | lg:w-11/12 | xl:w-11/12 | 2xl:w-11/12 | 3xl:w-9/12 mx-auto flex flex-wrap items-center justify-between mt-6 | lg:mt-28">
+        <div class="px-8 | lg:px-4 w-full | lg:w-4/12 | 3xl:w-5/12">
+            <a href="#"
+               class="w-full bg-opacity-5 flex items-center justify-between space-x-10 underlined-group group py-4 px-6 | lg:px-12 lg:py-6"
+               x-on:click.prevent="window.scrollTo({top: 0,left: 0,behavior: 'smooth'});">
+                <div class="">
+                    <div class="text-white text-md underlined tracking-tight">
+                        © Copyright 2025 | All Rights Reserved | Powered by SEGI 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="px-8 | lg:px-4 flex flex-wrap items-center w-full mt-8 mb-8 | lg:mb-0 lg:space-x-5 lg:mt-0 lg:w-auto">
+            <div class="w-full | lg:w-auto">
+                <a href="~/Home/Index"
+                   class="text-white text-opacity-80 text-xs tracking-tight underlined | hover:text-opacity-100">
+                    Terms
+                </a>
+            </div>
+            <div class="w-full | lg:w-auto">
+            <a href="~/Home/Index"
+                   class="text-white text-opacity-80 text-xs tracking-tight underlined | hover:text-opacity-100">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="w-full | lg:w-auto">
+            <a href="~/Home/ContactUs"
+                   class="text-white text-opacity-80 text-xs underlined mr-8 | hover:text-opacity-100">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!--end/ Footer -->
